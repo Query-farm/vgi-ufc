@@ -1,0 +1,100 @@
+# Private grader fields for the public tasks in the catalog's vgi.agent_test_tasks tag.
+# Every task reads live upstream data (rankings and schedules move weekly, and
+# even finished cards and fighter records can be corrected), so each grades
+# with a deterministic check_sql assertion about the specific ground truth
+# instead of an exact reference-result comparison. Historical tasks are pinned
+# to finished events: UFC feed event 1291, UFC feed event 1294 (UFC 324), UFC
+# feed fight 12000, ESPN event 600057024 (UFC 324), and ESPN athlete 3022677
+# (Conor McGregor).
+tasks:
+  - name: current_champions
+    check_sql: >-
+      SELECT count(*) >= 10 AND count(DISTINCT division) = count(*)
+      FROM ufc.main.current_rankings
+      WHERE is_champion AND NOT pound_for_pound
+    success_criteria: >-
+      Uses current_rankings filtered to is_champion (rank 0) and names one champion per weight
+      class, covering both men's and women's divisions.
+
+  - name: next_ufc_event
+    check_sql: >-
+      SELECT count(*) > 0 AND bool_and(event_state = 'pre')
+      FROM ufc.main.upcoming_events
+    success_criteria: >-
+      Reads upcoming_events, orders by start_time, and reports the first event's name, date,
+      venue and city.
+
+  - name: events_this_year
+    check_sql: >-
+      SELECT (SELECT count(*) FROM ufc.main.current_season_events WHERE event_state = 'post') > 0
+         AND (SELECT count(*) FROM ufc.main.events(season := 2026, league := 'pfl')) >= 10
+    success_criteria: >-
+      Counts finished events (event_state = 'post') in current_season_events and counts the rows of
+      events(season := 2026, league := 'pfl').
+
+  - name: ufc_324_results
+    check_sql: >-
+      SELECT count(*) = 1
+      FROM ufc.main.event_bouts(600057024)
+      WHERE match_number = 1 AND winner_name = 'Justin Gaethje'
+        AND method = 'Decision - Unanimous'
+    success_criteria: >-
+      Uses event_bouts(600057024): Justin Gaethje beat Paddy Pimblett by unanimous decision in the
+      UFC 324 main event.
+
+  - name: feed_event_lookup
+    check_sql: >-
+      SELECT (SELECT event_id FROM ufc.main.feed_events(1290, 1300)
+              WHERE event_name LIKE 'UFC 324:%') = 1294
+         AND (SELECT red_fighter_name || ' vs. ' || blue_fighter_name
+              FROM ufc.main.fight_card(1294) WHERE fight_order = 1) = 'Justin Gaethje vs. Paddy Pimblett'
+    success_criteria: >-
+      Scans feed_events(1290, 1300), identifies feed event 1294 as UFC 324, and reads its main event
+      from fight_card(1294): Justin Gaethje vs. Paddy Pimblett.
+
+  - name: card_results_1291
+    check_sql: >-
+      SELECT count(*) = 12
+         AND count(*) FILTER (WHERE fight_order = 1 AND winner_name = 'Gabriel Bonfim'
+                              AND method = 'KO/TKO' AND ending_round = 2) = 1
+         AND count(*) FILTER (WHERE method LIKE 'Decision%') = 4
+      FROM ufc.main.fight_results(1291)
+    success_criteria: >-
+      Uses fight_results(1291) ordered by fight_order: Gabriel Bonfim beat Randy Brown by KO/TKO in
+      round 2 in the main event.
+
+  - name: longest_reach_1291
+    check_sql: >-
+      SELECT arg_max(fighter_name, reach_in) = 'Christian Leroy Duncan' AND max(reach_in) = 79.0
+      FROM ufc.main.card_fighters(1291)
+    success_criteria: >-
+      Uses card_fighters(1291) and orders by reach_in: Christian Leroy Duncan, 79 inches.
+
+  - name: fight_12000_breakdown
+    check_sql: >-
+      SELECT (SELECT sum(sig_strikes_landed) FROM ufc.main.fight_stats(12000)) = 146
+         AND (SELECT max(sig_strikes_landed) FILTER (WHERE round_number = 3)
+              FROM ufc.main.fight_round_stats(12000)) = 60
+         AND (SELECT count(DISTINCT judge_id) FROM ufc.main.fight_scorecards(12000)) = 3
+    success_criteria: >-
+      Uses fight_stats(12000) for totals (Navajo Stirling 110, Ivan Erslan 36), fight_round_stats
+      for the per-round split (Stirling 31, 19, 60; Erslan 12, 11, 13), and sums
+      fight_scorecards(12000) by judge (29-28, 29-28, 29-27 for Stirling).
+
+  - name: mcgregor_profile
+    check_sql: >-
+      SELECT (SELECT wins >= 22 AND ko_tko_wins >= 19 FROM ufc.main.fighter(3022677))
+         AND (SELECT sum(knockdowns) >= 13 FROM ufc.main.fighter_career_stats(3022677))
+    success_criteria: >-
+      Uses fighter(3022677) for the record (22-7-0) and KO/TKO wins (19), and sums knockdowns from
+      fighter_career_stats(3022677) (13 at the time of writing).
+
+  - name: mcgregor_recent_fights
+    check_sql: >-
+      SELECT count(*) = 5
+         AND count(*) FILTER (WHERE opponent_name = 'Dustin Poirier') = 2
+      FROM ufc.main.fighter_fight_history(3022677)
+      WHERE fight_number BETWEEN 2 AND 6
+    success_criteria: >-
+      Uses fighter_fight_history(3022677) ordered by fight_number (or event_time descending) and
+      lists the five most recent fights with opponent and result.

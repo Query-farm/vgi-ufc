@@ -1,0 +1,26 @@
+location = "uv run --project . vgi-ufc"
+select = ["ALL"]
+fail_on = "warning"
+
+# Each parameterless all_* scan is exposed as the table of the same name without the
+# all_ prefix (all_current_rankings -> current_rankings, all_upcoming_events ->
+# upcoming_events, all_current_season_events -> current_season_events). The rules
+# below only recognise a table with the function's own name, but a function and a
+# table cannot share a name inside one schema; the all_ names avoid that collision.
+[per_object."ufc.main.all_current_rankings"]
+ignore = [
+  { code = "VGI311", kind = "tooling-bug", reason = "Exposed as the current_rankings table; the rule only matches a table with the function's own name, which cannot coexist with the function in one schema." },
+  { code = "VGI520", kind = "domain-exemption", reason = "Agent tasks query the public current_rankings table, which scans this function; the hermetic Haybarn E2E test calls the backing scan directly." },
+]
+
+[per_object."ufc.main.all_upcoming_events"]
+ignore = [
+  { code = "VGI311", kind = "tooling-bug", reason = "Exposed as the upcoming_events table; the rule only matches a table with the function's own name, which cannot coexist with the function in one schema." },
+  { code = "VGI520", kind = "domain-exemption", reason = "Agent tasks query the public upcoming_events table, which scans this function; the hermetic Haybarn E2E test calls the backing scan directly." },
+]
+
+[per_object."ufc.main.all_current_season_events"]
+ignore = [
+  { code = "VGI311", kind = "tooling-bug", reason = "Exposed as the current_season_events table; the rule only matches a table with the function's own name, which cannot coexist with the function in one schema." },
+  { code = "VGI520", kind = "domain-exemption", reason = "Agent tasks query the public current_season_events table, which scans this function; the hermetic Haybarn E2E test calls the backing scan directly." },
+]

@@ -1,0 +1,415 @@
+{
+ "categories": [
+  {
+   "displayName": "striking",
+   "labels": [
+    "SDBL/A",
+    "SDHL/A",
+    "SDLL/A",
+    "TSL",
+    "TSA",
+    "SSL",
+    "SSA",
+    "TSL-TSA",
+    "KD",
+    "%BODY",
+    "%HEAD",
+    "%LEG"
+   ],
+   "names": [
+    "Significant Distance Body Strikes Landed-Significant DistanceBodyStrike Attempts",
+    "Significant Distance Head Strikes Landed-Significant Distance Head Strike Attempts",
+    "Significant Distance Leg Strikes Landed-Significant Distance Leg Strike Attempts",
+    "Strikes Landed",
+    "Total Strikes Attempts",
+    "Significant Strikes Landed",
+    "Significant Strikes Attempts",
+    "Strikes Landed-Total Strikes Attempts",
+    "Knockdowns",
+    "Target Breakdown Body",
+    "Target Breakdown Head",
+    "Target Breakdown Leg"
+   ],
+   "displayNames": [
+    "Significant Distance Body Strikes Landed-Significant Distance Body Strike Attempts",
+    "Significant Distance Head Strikes Landed-Significant Distance Head Strike Attempts",
+    "Significant Distance Leg Strikes Landed-Significant Distance Leg Strike Attempts",
+    "Total Strikes Landed",
+    "Total Strikes Attempts",
+    "Significant Strikes Landed",
+    "Significant Strikes Attempts",
+    "Total Strikes Landed-Total Strikes Attempts",
+    "Knockdowns",
+    "Target Breakdown Body",
+    "Target Breakdown Head",
+    "Target Breakdown Leg"
+   ],
+   "statistics": [
+    {
+     "uid": "s:3301~l:3321~e:600059148~c:401867788",
+     "eventId": "600059148",
+     "stats": [
+      "0/0",
+      "0/5",
+      "0/0",
+      "5",
+      "11",
+      "0",
+      "6",
+      "45.45%",
+      "0",
+      "0%",
+      "0%",
+      "0%"
+     ]
+    },
+    {
+     "uid": "s:3301~l:3321~e:600005500~c:401320793",
+     "eventId": "600005500",
+     "stats": [
+      "5/8",
+      "4/10",
+      "8/8",
+      "43",
+      "54",
+      "27",
+      "38",
+      "79.63%",
+      "0",
+      "67%",
+      "62%",
+      "100%"
+     ]
+    },
+    {
+     "uid": "s:3301~l:3321~e:600000835~c:401264972",
+     "eventId": "600000835",
+     "stats": [
+      "3/3",
+      "22/58",
+      "2/2",
+      "52",
+      "92",
+      "29",
+      "66",
+      "56.52%",
+      "0",
+      "100%",
+      "38%",
+      "100%"
+     ]
+    },
+    {
+     "uid": "s:3301~l:3321~e:401186853~c:275299",
+     "eventId": "401186853",
+     "stats": [
+      "0/1",
+      "3/6",
+      "0/0",
+      "20",
+      "27",
+      "19",
+      "26",
+      "74.07%",
+      "1",
+      "0%",
+      "76%",
+      "0%"
+     ]
+    },
+    {
+     "uid": "s:3301~l:3321~e:401006828~c:252254",
+     "eventId": "401006828",
+     "stats": [
+      "10/13",
+      "24/50",
+      "1/2",
+      "96",
+      "128",
+      "51",
+      "81",
+      "75.00%",
+      "0",
+      "84%",
+      "57%",
+      "50%"
+     ]
+    }
+   ]
+  },
+  {
+   "displayName": "Clinch",
+   "labels": [
+    "SCBL\t",
+    "SCBA",
+    "SCHL",
+    "SCHA",
+    "SCLL",
+    "SCLA",
+    "RV",
+    "SR",
+    "TDL",
+    "TDA",
+    "TDS",
+    "TK ACC"
+   ],
+   "names": [
+    "Significant Clinch Body Strikes Landed",
+    "Significant Clinch Body Strike Attempts",
+    "Significant Clinch Head Strikes Landed",
+    "Significant Clinch Head Strike Attempts",
+    "Significant Clinch Leg Strikes Landed",
+    "Significant Clinch Leg Strike Attempts",
+    "Reversals",
+    "Slam Rate",
+    "Takedowns Landed",
+    "Takedowns Attempted",
+    "Takedowns Slams",
+    "TK ACC"
+   ],
+   "displayNames": [
+    "Significant Clinch Body Strikes Landed",
+    "Significant Clinch Body Strike Attempts",
+    "Significant Clinch Head Strikes Landed",
+    "Significant Clinch Head Strike Attempts",
+    "Significant Clinch Leg Strikes Landed",
+    "Significant Clinch Leg Strike Attempts",
+    "Reversals",
+    "Slam Rate",
+    "Takedowns Landed",
+    "Takedowns Attempted",
+    "Takedowns Slams",
+    "Takedown Accuracy"
+   ],
+   "statistics": [
+    {
+     "uid": "s:3301~l:3321~e:600059148~c:401867788",
+     "eventId": "600059148",
+     "stats": [
+      "0",
+      "0",
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0.000",
+      "0",
+      "0",
+      "0",
+      "0%"
+     ]
+    },
+    {
+     "uid": "s:3301~l:3321~e:600005500~c:401320793",
+     "eventId": "600005500",
+     "stats": [
+      "1",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0.000",
+      "0",
+      "0",
+      "0",
+      "0%"
+     ]
+    },
+    {
+     "uid": "s:3301~l:3321~e:600000835~c:401264972",
+     "eventId": "600000835",
+     "stats": [
+      "1",
+      "1",
+      "1",
+      "2",
+      "0",
+      "0",
+      "0",
+      "0.000",
+      "0",
+      "1",
+      "0",
+      "0%"
+     ]
+    },
+    {
+     "uid": "s:3301~l:3321~e:401186853~c:275299",
+     "eventId": "401186853",
+     "stats": [
+      "0",
+      "0",
+      "3",
+      "3",
+      "0",
+      "0",
+      "0",
+      "0.000",
+      "0",
+      "0",
+      "0",
+      "0%"
+     ]
+    },
+    {
+     "uid": "s:3301~l:3321~e:401006828~c:252254",
+     "eventId": "401006828",
+     "stats": [
+      "6",
+      "6",
+      "4",
+      "4",
+      "0",
+      "0",
+      "0",
+      "0.000",
+      "0",
+      "0",
+      "0",
+      "0%"
+     ]
+    }
+   ]
+  },
+  {
+   "displayName": "Ground",
+   "labels": [
+    "SGBL",
+    "SGBA\t",
+    "SGHL",
+    "SGHA",
+    "SGLL",
+    "SGLA",
+    "AD",
+    "ADTB",
+    "ADHG",
+    "ADTM",
+    "ADTS",
+    "SM"
+   ],
+   "names": [
+    "Significant Ground Body Strikes Landed",
+    "Significant Ground Body Strike Attempts",
+    "Significant Ground Head Strikes Landed",
+    "Significant Ground Head Strike Attempts",
+    "Significant Ground Leg Strikes Landed",
+    "Significant Ground Leg Strikes Attempted",
+    "Advances",
+    "Advance To Back",
+    "Advance To Half Guard",
+    "Advance To Mount",
+    "Advance To Side",
+    "Submissions"
+   ],
+   "displayNames": [
+    "Significant Ground Body Strikes Landed",
+    "Significant Ground Body Strike Attempts",
+    "Significant Ground Head Strikes Landed",
+    "Significant Ground Head Strike Attempts",
+    "Significant Ground Leg Strikes Landed",
+    "Significant Ground Leg Strikes Attempted",
+    "Advances",
+    "Advance To Back",
+    "Advance To Half Guard",
+    "Advance To Mount",
+    "Advance To Side",
+    "Submissions"
+   ],
+   "statistics": [
+    {
+     "uid": "s:3301~l:3321~e:600059148~c:401867788",
+     "eventId": "600059148",
+     "stats": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    },
+    {
+     "uid": "s:3301~l:3321~e:600005500~c:401320793",
+     "eventId": "600005500",
+     "stats": [
+      "0",
+      "0",
+      "9",
+      "11",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1"
+     ]
+    },
+    {
+     "uid": "s:3301~l:3321~e:600000835~c:401264972",
+     "eventId": "600000835",
+     "stats": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    },
+    {
+     "uid": "s:3301~l:3321~e:401186853~c:275299",
+     "eventId": "401186853",
+     "stats": [
+      "0",
+      "0",
+      "13",
+      "16",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    },
+    {
+     "uid": "s:3301~l:3321~e:401006828~c:252254",
+     "eventId": "401006828",
+     "stats": [
+      "0",
+      "0",
+      "6",
+      "6",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+     ]
+    }
+   ]
+  }
+ ]
+}

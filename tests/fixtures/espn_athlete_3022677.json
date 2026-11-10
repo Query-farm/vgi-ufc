@@ -1,0 +1,221 @@
+{
+ "athlete": {
+  "id": "3022677",
+  "uid": "s:3301~a:3022677",
+  "guid": "d715f512-b3a9-74f0-a760-d66701cfb199",
+  "firstName": "Conor",
+  "lastName": "McGregor",
+  "displayName": "Conor McGregor",
+  "fullName": "Conor McGregor",
+  "nickname": "The Notorious",
+  "active": true,
+  "status": {
+   "id": "1",
+   "name": "Active",
+   "type": "active",
+   "abbreviation": "Active"
+  },
+  "statsSummary": {
+   "displayName": "Stats",
+   "statistics": [
+    {
+     "name": "wins-losses-draws",
+     "type": "wins-losses-draws",
+     "displayName": "Wins-Losses-Draws",
+     "shortDisplayName": "W-L-Draws",
+     "description": "Wins-Losses-Draws",
+     "abbreviation": "W-L-D",
+     "value": 22.0,
+     "displayValue": "22-7-0"
+    },
+    {
+     "name": "tkos-tkoLosses",
+     "type": "tkos-tkolosses",
+     "displayName": "Technical Knockout-Technical Knockout Losses",
+     "shortDisplayName": "TKO-TKOL",
+     "description": "Technical Knockout-Technical Knockout Losses",
+     "abbreviation": "(T)KO",
+     "value": 19.0,
+     "displayValue": "19-3"
+    },
+    {
+     "name": "submissions-submissionLosses",
+     "type": "submissions-submissionlosses",
+     "displayName": "Submissions-Submission Losses",
+     "shortDisplayName": "SUB-SUBL",
+     "description": "Submissions-Submission Losses",
+     "abbreviation": "SUB",
+     "value": 1.0,
+     "displayValue": "1-4"
+    }
+   ]
+  },
+  "displayHeight": "5' 9\"",
+  "displayWeight": "170 lbs",
+  "displayDOB": "14/7/1988",
+  "age": 38,
+  "gender": "MALE",
+  "association": {
+   "id": "2786",
+   "name": "SBG Ireland"
+  },
+  "citizenship": "Ireland",
+  "citizenshipCountry": {
+   "alternateId": "160",
+   "abbreviation": "IRL",
+   "color": "#169B62",
+   "alternateColor": "#FF883E"
+  },
+  "weightClass": {
+   "id": "969",
+   "text": "Welterweight",
+   "shortName": "Welterweight",
+   "slug": "welterweight"
+  },
+  "displayReach": "74\"",
+  "stance": {
+   "id": "76",
+   "text": "Southpaw"
+  },
+  "displayFightingStyle": "Striker"
+ },
+ "events": [
+  "s:3301~l:3321~e:600059148~c:401867788",
+  "s:3301~l:3321~e:600005500~c:401320793",
+  "s:3301~l:3321~e:600000835~c:401264972",
+  "s:3301~l:3321~e:401186853~c:275299",
+  "s:3301~l:3321~e:401006828~c:252254"
+ ],
+ "eventsMap": {
+  "s:3301~l:3321~e:600059148~c:401867788": {
+   "id": "600059148",
+   "uid": "s:3301~l:3321~e:600059148~c:401867788",
+   "name": "UFC 329: McGregor vs. Holloway 2",
+   "shortName": "UFC 329",
+   "gameDate": "2026-07-11T21:00:00.000+00:00",
+   "gameResult": "L",
+   "opponent": {
+    "id": "2614933",
+    "uid": "s:3301~a:2614933",
+    "displayName": "Max Holloway",
+    "fullName": "Max Holloway",
+    "lastName": "Holloway",
+    "shortName": "M. Holloway"
+   },
+   "status": {
+    "displayClock": "1:09",
+    "period": 1,
+    "result": {
+     "name": "kotko",
+     "displayName": "KO/TKO",
+     "shortDisplayName": "KO/TKO"
+    }
+   },
+   "titleFight": false
+  },
+  "s:3301~l:3321~e:600005500~c:401320793": {
+   "id": "600005500",
+   "uid": "s:3301~l:3321~e:600005500~c:401320793",
+   "name": "UFC 264: Poirier vs. McGregor 3",
+   "shortName": "UFC 264",
+   "gameDate": "2021-07-10T22:00:00.000+00:00",
+   "gameResult": "L",
+   "opponent": {
+    "id": "2506549",
+    "uid": "s:3301~a:2506549",
+    "displayName": "Dustin Poirier",
+    "fullName": "Dustin Poirier",
+    "lastName": "Poirier",
+    "shortName": "D. Poirier"
+   },
+   "status": {
+    "displayClock": "5:00",
+    "period": 1,
+    "result": {
+     "name": "tko---doctors-stoppage",
+     "displayName": "TKO - Doctor's Stoppage",
+     "shortDisplayName": "TKO - Dr"
+    }
+   },
+   "titleFight": false
+  },
+  "s:3301~l:3321~e:600000835~c:401264972": {
+   "id": "600000835",
+   "uid": "s:3301~l:3321~e:600000835~c:401264972",
+   "name": "UFC 257: Poirier vs. McGregor 2",
+   "shortName": "UFC 257",
+   "gameDate": "2021-01-24T00:00:00.000+00:00",
+   "gameResult": "L",
+   "opponent": {
+    "id": "2506549",
+    "uid": "s:3301~a:2506549",
+    "displayName": "Dustin Poirier",
+    "fullName": "Dustin Poirier",
+    "lastName": "Poirier",
+    "shortName": "D. Poirier"
+   },
+   "status": {
+    "displayClock": "2:32",
+    "period": 2,
+    "result": {
+     "name": "kotko",
+     "displayName": "KO/TKO",
+     "shortDisplayName": "KO/TKO"
+    }
+   },
+   "titleFight": false
+  },
+  "s:3301~l:3321~e:401186853~c:275299": {
+   "id": "401186853",
+   "uid": "s:3301~l:3321~e:401186853~c:275299",
+   "name": "UFC 246: McGregor vs. Cowboy",
+   "shortName": "UFC 246",
+   "gameDate": "2020-01-19T00:00:00.000+00:00",
+   "gameResult": "W",
+   "opponent": {
+    "id": "2479918",
+    "uid": "s:3301~a:2479918",
+    "displayName": "Donald Cerrone",
+    "fullName": "Donald Cerrone",
+    "lastName": "Cerrone",
+    "shortName": "D. Cerrone"
+   },
+   "status": {
+    "displayClock": "0:40",
+    "period": 1,
+    "result": {
+     "name": "kotko",
+     "displayName": "KO/TKO",
+     "shortDisplayName": "KO/TKO"
+    }
+   },
+   "titleFight": false
+  },
+  "s:3301~l:3321~e:401006828~c:252254": {
+   "id": "401006828",
+   "uid": "s:3301~l:3321~e:401006828~c:252254",
+   "name": "UFC 229: Khabib vs. McGregor",
+   "shortName": "UFC 229",
+   "gameDate": "2018-10-07T02:00:00.000+00:00",
+   "gameResult": "L",
+   "opponent": {
+    "id": "2611557",
+    "uid": "s:3301~a:2611557",
+    "displayName": "Khabib Nurmagomedov",
+    "fullName": "Khabib Nurmagomedov",
+    "lastName": "Nurmagomedov",
+    "shortName": "K. Nurmagomedov"
+   },
+   "status": {
+    "displayClock": "3:03",
+    "period": 4,
+    "result": {
+     "name": "submission",
+     "displayName": "Submission",
+     "shortDisplayName": "Sub"
+    }
+   },
+   "titleFight": true
+  }
+ }
+}

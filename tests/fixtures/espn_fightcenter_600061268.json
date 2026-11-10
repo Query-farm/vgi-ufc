@@ -1,0 +1,1333 @@
+{
+ "event": {
+  "id": "600061268",
+  "uid": "s:3301~l:3321~e:600061268",
+  "date": "2026-11-07T22:00:00.000+00:00",
+  "name": "UFC Fight Night: Cortes Acosta vs. Walker",
+  "shortName": "UFC Fight Night"
+ },
+ "season": {
+  "year": 2026,
+  "displayName": "2026",
+  "startDate": "2026-01-01T08:00:00.000+00:00",
+  "endDate": "2026-12-31T08:00:00.000+00:00",
+  "type": {
+   "id": "2",
+   "type": 2,
+   "name": "Regular Season",
+   "startDate": "2026-01-01T08:00:00.000+00:00",
+   "endDate": "2026-12-31T08:00:00.000+00:00",
+   "week": {}
+  }
+ },
+ "venue": {
+  "id": "6176",
+  "fullName": "Meta APEX",
+  "displayNameLocation": "Meta APEX, Las Vegas, NV",
+  "address": {
+   "city": "Las Vegas",
+   "state": "NV",
+   "country": "USA"
+  },
+  "grass": false,
+  "indoor": true
+ },
+ "cards": {
+  "main": {
+   "name": "main",
+   "displayName": "Main Card",
+   "cardSegment": "main",
+   "competitions": [
+    {
+     "id": "401932715",
+     "uid": "s:3301~l:3321~e:600061268~c:401932715",
+     "date": "2026-11-08T01:00:00.000+00:00",
+     "type": {
+      "id": "982",
+      "text": "Heavyweight",
+      "abbreviation": "Heavyweight"
+     },
+     "recent": false,
+     "status": {
+      "clock": "147.0",
+      "displayClock": "2:27",
+      "period": 3,
+      "type": {
+       "id": "3",
+       "name": "STATUS_FINAL",
+       "description": "Final",
+       "detail": "Final",
+       "shortDetail": "Final",
+       "state": "post",
+       "completed": true
+      },
+      "result": {
+       "id": "356",
+       "name": "kotko",
+       "displayName": "KO/TKO",
+       "shortDisplayName": "KO/TKO",
+       "description": "Punch",
+       "displayDescription": "Punch",
+       "target": {
+        "id": "122",
+        "name": "head",
+        "description": "Head",
+        "displayDescription": "Head"
+       }
+      },
+      "featured": true
+     },
+     "cardSegment": {
+      "id": "173",
+      "name": "main",
+      "description": "Main Card"
+     },
+     "matchNumber": 1,
+     "note": "Heavyweight - Main Event",
+     "competitors": [
+      {
+       "id": "3146944",
+       "uid": "s:3301~a:3146944",
+       "type": "athlete",
+       "athlete": {
+        "id": "3146944",
+        "uid": "s:3301~a:3146944",
+        "firstName": "Johnny",
+        "lastName": "Walker",
+        "displayName": "Johnny Walker",
+        "fullName": "Johnny Walker",
+        "shortName": "J. Walker",
+        "displayHeight": "6' 6\"",
+        "displayWeight": "239 lbs",
+        "country": "Brazil",
+        "age": 34,
+        "gender": "MALE",
+        "displayReach": "82\"",
+        "stance": {
+         "id": "75",
+         "text": "Orthodox"
+        },
+        "weightClass": {
+         "id": "982",
+         "text": "Heavyweight",
+         "shortName": "Heavyweight",
+         "slug": "heavyweight"
+        },
+        "color": "#FFDF00",
+        "alternateColor": "#002776"
+       },
+       "order": 2,
+       "winner": true,
+       "displayRecord": "24-10-0",
+       "stats": [
+        {
+         "name": "knockDowns",
+         "displayName": "Knockdowns",
+         "shortDisplayName": "Knockdowns",
+         "description": "Knockdowns",
+         "abbreviation": "KD",
+         "value": 1.0,
+         "displayValue": "1"
+        },
+        {
+         "name": "totalStrikes",
+         "displayName": "totalStrikes",
+         "shortDisplayName": "totalStrikes",
+         "description": "totalStrikes",
+         "abbreviation": "totalStrikes",
+         "value": 61,
+         "displayValue": "61/87"
+        },
+        {
+         "name": "sigStrikes",
+         "displayName": "sigStrikes",
+         "shortDisplayName": "sigStrikes",
+         "description": "sigStrikes",
+         "abbreviation": "sigStrikes",
+         "value": 51,
+         "displayValue": "51/77"
+        },
+        {
+         "name": "headStrikes",
+         "displayName": "headStrikes",
+         "shortDisplayName": "headStrikes",
+         "description": "headStrikes",
+         "abbreviation": "headStrikes",
+         "value": 17,
+         "displayValue": "17/42"
+        },
+        {
+         "name": "bodyStrikes",
+         "displayName": "bodyStrikes",
+         "shortDisplayName": "bodyStrikes",
+         "description": "bodyStrikes",
+         "abbreviation": "bodyStrikes",
+         "value": 11,
+         "displayValue": "11/12"
+        },
+        {
+         "name": "legStrikes",
+         "displayName": "legStrikes",
+         "shortDisplayName": "legStrikes",
+         "description": "legStrikes",
+         "abbreviation": "legStrikes",
+         "value": 23,
+         "displayValue": "23/23"
+        },
+        {
+         "name": "timeInControl",
+         "displayName": "Time in Control",
+         "description": "Time in Control",
+         "abbreviation": "TIC",
+         "value": 9.0,
+         "displayValue": "0:09"
+        },
+        {
+         "name": "takedowns",
+         "displayName": "takedowns",
+         "shortDisplayName": "takedowns",
+         "description": "takedowns",
+         "abbreviation": "takedowns",
+         "value": 0,
+         "displayValue": "0/0"
+        },
+        {
+         "name": "submissions",
+         "displayName": "Submissions",
+         "shortDisplayName": "Submissions",
+         "description": "Submissions",
+         "abbreviation": "SM",
+         "value": 0.0,
+         "displayValue": "0"
+        }
+       ]
+      },
+      {
+       "id": "4903365",
+       "uid": "s:3301~a:4903365",
+       "type": "athlete",
+       "athlete": {
+        "id": "4903365",
+        "uid": "s:3301~a:4903365",
+        "firstName": "Waldo",
+        "lastName": "Cortes Acosta",
+        "displayName": "Waldo Cortes Acosta",
+        "fullName": "Waldo Cortes Acosta",
+        "shortName": "W. Cortes Acosta",
+        "displayHeight": "6' 4\"",
+        "displayWeight": "262 lbs",
+        "country": "Dominican Republic",
+        "age": 35,
+        "gender": "MALE",
+        "displayReach": "78\"",
+        "stance": {
+         "id": "75",
+         "text": "Orthodox"
+        },
+        "weightClass": {
+         "id": "982",
+         "text": "Heavyweight",
+         "shortName": "Heavyweight",
+         "slug": "heavyweight"
+        },
+        "color": "#0026F5",
+        "alternateColor": "#EB3223"
+       },
+       "order": 1,
+       "winner": false,
+       "displayRecord": "17-5-0",
+       "stats": [
+        {
+         "name": "knockDowns",
+         "displayName": "Knockdowns",
+         "shortDisplayName": "Knockdowns",
+         "description": "Knockdowns",
+         "abbreviation": "KD",
+         "value": 1.0,
+         "displayValue": "1"
+        },
+        {
+         "name": "totalStrikes",
+         "displayName": "totalStrikes",
+         "shortDisplayName": "totalStrikes",
+         "description": "totalStrikes",
+         "abbreviation": "totalStrikes",
+         "value": 67,
+         "displayValue": "67/117"
+        },
+        {
+         "name": "sigStrikes",
+         "displayName": "sigStrikes",
+         "shortDisplayName": "sigStrikes",
+         "description": "sigStrikes",
+         "abbreviation": "sigStrikes",
+         "value": 40,
+         "displayValue": "40/89"
+        },
+        {
+         "name": "headStrikes",
+         "displayName": "headStrikes",
+         "shortDisplayName": "headStrikes",
+         "description": "headStrikes",
+         "abbreviation": "headStrikes",
+         "value": 36,
+         "displayValue": "36/85"
+        },
+        {
+         "name": "bodyStrikes",
+         "displayName": "bodyStrikes",
+         "shortDisplayName": "bodyStrikes",
+         "description": "bodyStrikes",
+         "abbreviation": "bodyStrikes",
+         "value": 3,
+         "displayValue": "3/3"
+        },
+        {
+         "name": "legStrikes",
+         "displayName": "legStrikes",
+         "shortDisplayName": "legStrikes",
+         "description": "legStrikes",
+         "abbreviation": "legStrikes",
+         "value": 1,
+         "displayValue": "1/1"
+        },
+        {
+         "name": "timeInControl",
+         "displayName": "Time in Control",
+         "description": "Time in Control",
+         "abbreviation": "TIC",
+         "value": 264.0,
+         "displayValue": "4:24"
+        },
+        {
+         "name": "takedowns",
+         "displayName": "takedowns",
+         "shortDisplayName": "takedowns",
+         "description": "takedowns",
+         "abbreviation": "takedowns",
+         "value": 0,
+         "displayValue": "0/0"
+        },
+        {
+         "name": "submissions",
+         "displayName": "Submissions",
+         "shortDisplayName": "Submissions",
+         "description": "Submissions",
+         "abbreviation": "SM",
+         "value": 0.0,
+         "displayValue": "0"
+        }
+       ]
+      }
+     ],
+     "officials": [
+      {
+       "id": "2594328",
+       "firstName": "Jason",
+       "lastName": "Herzog",
+       "position": {
+        "id": "42",
+        "name": "Referee",
+        "displayName": "Referee",
+        "leaf": false,
+        "slug": "referee"
+       },
+       "order": 0
+      },
+      {
+       "id": "4410607",
+       "firstName": "Judge",
+       "lastName": "1",
+       "position": {
+        "id": "41",
+        "name": "Judge",
+        "displayName": "Judge",
+        "leaf": false,
+        "slug": "judge"
+       },
+       "order": 1
+      }
+     ]
+    },
+    {
+     "id": "401928111",
+     "uid": "s:3301~l:3321~e:600061268~c:401928111",
+     "date": "2026-11-08T01:00:00.000+00:00",
+     "type": {
+      "id": "1006",
+      "text": "Women's Strawweight",
+      "abbreviation": "W Strawweight"
+     },
+     "recent": false,
+     "status": {
+      "clock": "300.0",
+      "displayClock": "5:00",
+      "period": 3,
+      "type": {
+       "id": "3",
+       "name": "STATUS_FINAL",
+       "description": "Final",
+       "detail": "Final",
+       "shortDetail": "Final",
+       "state": "post",
+       "completed": true
+      },
+      "result": {
+       "id": "263",
+       "name": "decision---unanimous",
+       "displayName": "Decision - Unanimous",
+       "shortDisplayName": "U Dec"
+      },
+      "featured": false
+     },
+     "cardSegment": {
+      "id": "173",
+      "name": "main",
+      "description": "Main Card"
+     },
+     "matchNumber": 2,
+     "note": "Women's Strawweight",
+     "judgesScores": "30-27 | 29-28 | 30-27",
+     "competitors": [
+      {
+       "id": "4289516",
+       "uid": "s:3301~a:4289516",
+       "type": "athlete",
+       "athlete": {
+        "id": "4289516",
+        "uid": "s:3301~a:4289516",
+        "firstName": "Virna",
+        "lastName": "Jandiroba",
+        "displayName": "Virna Jandiroba",
+        "fullName": "Virna Jandiroba",
+        "shortName": "V. Jandiroba",
+        "displayHeight": "5' 3\"",
+        "displayWeight": "116 lbs",
+        "country": "Brazil",
+        "age": 38,
+        "gender": "FEMALE",
+        "displayReach": "64\"",
+        "stance": {
+         "id": "75",
+         "text": "Orthodox"
+        },
+        "weightClass": {
+         "id": "1006",
+         "text": "Women's Strawweight",
+         "shortName": "W Strawweight",
+         "slug": "womens-strawweight"
+        },
+        "color": "#FFDF00",
+        "alternateColor": "#002776"
+       },
+       "order": 2,
+       "winner": false,
+       "displayRecord": "23-5-0",
+       "stats": [
+        {
+         "name": "knockDowns",
+         "displayName": "Knockdowns",
+         "shortDisplayName": "Knockdowns",
+         "description": "Knockdowns",
+         "abbreviation": "KD",
+         "value": 0.0,
+         "displayValue": "0"
+        },
+        {
+         "name": "totalStrikes",
+         "displayName": "totalStrikes",
+         "shortDisplayName": "totalStrikes",
+         "description": "totalStrikes",
+         "abbreviation": "totalStrikes",
+         "value": 45,
+         "displayValue": "45/74"
+        },
+        {
+         "name": "sigStrikes",
+         "displayName": "sigStrikes",
+         "shortDisplayName": "sigStrikes",
+         "description": "sigStrikes",
+         "abbreviation": "sigStrikes",
+         "value": 17,
+         "displayValue": "17/45"
+        },
+        {
+         "name": "headStrikes",
+         "displayName": "headStrikes",
+         "shortDisplayName": "headStrikes",
+         "description": "headStrikes",
+         "abbreviation": "headStrikes",
+         "value": 12,
+         "displayValue": "12/34"
+        },
+        {
+         "name": "bodyStrikes",
+         "displayName": "bodyStrikes",
+         "shortDisplayName": "bodyStrikes",
+         "description": "bodyStrikes",
+         "abbreviation": "bodyStrikes",
+         "value": 4,
+         "displayValue": "4/4"
+        },
+        {
+         "name": "legStrikes",
+         "displayName": "legStrikes",
+         "shortDisplayName": "legStrikes",
+         "description": "legStrikes",
+         "abbreviation": "legStrikes",
+         "value": 1,
+         "displayValue": "1/7"
+        },
+        {
+         "name": "timeInControl",
+         "displayName": "Time in Control",
+         "description": "Time in Control",
+         "abbreviation": "TIC",
+         "value": 6.0,
+         "displayValue": "0:06"
+        },
+        {
+         "name": "takedowns",
+         "displayName": "takedowns",
+         "shortDisplayName": "takedowns",
+         "description": "takedowns",
+         "abbreviation": "takedowns",
+         "value": 1,
+         "displayValue": "1/5"
+        },
+        {
+         "name": "submissions",
+         "displayName": "Submissions",
+         "shortDisplayName": "Submissions",
+         "description": "Submissions",
+         "abbreviation": "SM",
+         "value": 1.0,
+         "displayValue": "1"
+        }
+       ]
+      },
+      {
+       "id": "4020435",
+       "uid": "s:3301~a:4020435",
+       "type": "athlete",
+       "athlete": {
+        "id": "4020435",
+        "uid": "s:3301~a:4020435",
+        "firstName": "Tatiana",
+        "lastName": "Suarez",
+        "displayName": "Tatiana Suarez",
+        "fullName": "Tatiana Suarez",
+        "shortName": "T. Suarez",
+        "displayHeight": "5' 5\"",
+        "displayWeight": "115 lbs",
+        "country": "USA",
+        "age": 35,
+        "gender": "FEMALE",
+        "displayReach": "66\"",
+        "stance": {
+         "id": "76",
+         "text": "Southpaw"
+        },
+        "weightClass": {
+         "id": "1006",
+         "text": "Women's Strawweight",
+         "shortName": "W Strawweight",
+         "slug": "womens-strawweight"
+        },
+        "color": "#3C3B6E",
+        "alternateColor": "#B22234"
+       },
+       "order": 1,
+       "winner": true,
+       "displayRecord": "14-1-0",
+       "stats": [
+        {
+         "name": "knockDowns",
+         "displayName": "Knockdowns",
+         "shortDisplayName": "Knockdowns",
+         "description": "Knockdowns",
+         "abbreviation": "KD",
+         "value": 0.0,
+         "displayValue": "0"
+        },
+        {
+         "name": "totalStrikes",
+         "displayName": "totalStrikes",
+         "shortDisplayName": "totalStrikes",
+         "description": "totalStrikes",
+         "abbreviation": "totalStrikes",
+         "value": 98,
+         "displayValue": "98/135"
+        },
+        {
+         "name": "sigStrikes",
+         "displayName": "sigStrikes",
+         "shortDisplayName": "sigStrikes",
+         "description": "sigStrikes",
+         "abbreviation": "sigStrikes",
+         "value": 28,
+         "displayValue": "28/56"
+        },
+        {
+         "name": "headStrikes",
+         "displayName": "headStrikes",
+         "shortDisplayName": "headStrikes",
+         "description": "headStrikes",
+         "abbreviation": "headStrikes",
+         "value": 12,
+         "displayValue": "12/32"
+        },
+        {
+         "name": "bodyStrikes",
+         "displayName": "bodyStrikes",
+         "shortDisplayName": "bodyStrikes",
+         "description": "bodyStrikes",
+         "abbreviation": "bodyStrikes",
+         "value": 16,
+         "displayValue": "16/24"
+        },
+        {
+         "name": "legStrikes",
+         "displayName": "legStrikes",
+         "shortDisplayName": "legStrikes",
+         "description": "legStrikes",
+         "abbreviation": "legStrikes",
+         "value": 0,
+         "displayValue": "0/0"
+        },
+        {
+         "name": "timeInControl",
+         "displayName": "Time in Control",
+         "description": "Time in Control",
+         "abbreviation": "TIC",
+         "value": 552.0,
+         "displayValue": "9:12"
+        },
+        {
+         "name": "takedowns",
+         "displayName": "takedowns",
+         "shortDisplayName": "takedowns",
+         "description": "takedowns",
+         "abbreviation": "takedowns",
+         "value": 0,
+         "displayValue": "0/8"
+        },
+        {
+         "name": "submissions",
+         "displayName": "Submissions",
+         "shortDisplayName": "Submissions",
+         "description": "Submissions",
+         "abbreviation": "SM",
+         "value": 0.0,
+         "displayValue": "0"
+        }
+       ]
+      }
+     ],
+     "officials": [
+      {
+       "id": "2594156",
+       "firstName": "Keith",
+       "lastName": "Peterson",
+       "position": {
+        "id": "42",
+        "name": "Referee",
+        "displayName": "Referee",
+        "leaf": false,
+        "slug": "referee"
+       },
+       "order": 0
+      },
+      {
+       "id": "4021253",
+       "firstName": "Ron",
+       "lastName": "McCarthy",
+       "position": {
+        "id": "41",
+        "name": "Judge",
+        "displayName": "Judge",
+        "leaf": false,
+        "slug": "judge"
+       },
+       "order": 1
+      },
+      {
+       "id": "4319691",
+       "firstName": "David",
+       "lastName": "Lethaby",
+       "position": {
+        "id": "41",
+        "name": "Judge",
+        "displayName": "Judge",
+        "leaf": false,
+        "slug": "judge"
+       },
+       "order": 2
+      },
+      {
+       "id": "2593970",
+       "firstName": "Eric",
+       "lastName": "Colon",
+       "position": {
+        "id": "41",
+        "name": "Judge",
+        "displayName": "Judge",
+        "leaf": false,
+        "slug": "judge"
+       },
+       "order": 3
+      }
+     ]
+    }
+   ]
+  },
+  "prelims1": {
+   "name": "prelims1",
+   "displayName": "Prelims",
+   "cardSegment": "prelims1",
+   "competitions": [
+    {
+     "id": "401911642",
+     "uid": "s:3301~l:3321~e:600061268~c:401911642",
+     "date": "2026-11-07T22:00:00.000+00:00",
+     "type": {
+      "id": "999",
+      "text": "Featherweight",
+      "abbreviation": "Featherweight"
+     },
+     "recent": false,
+     "status": {
+      "clock": "300.0",
+      "displayClock": "5:00",
+      "period": 3,
+      "type": {
+       "id": "3",
+       "name": "STATUS_FINAL",
+       "description": "Final",
+       "detail": "Final",
+       "shortDetail": "Final",
+       "state": "post",
+       "completed": true
+      },
+      "result": {
+       "id": "263",
+       "name": "decision---unanimous",
+       "displayName": "Decision - Unanimous",
+       "shortDisplayName": "U Dec"
+      },
+      "featured": false
+     },
+     "cardSegment": {
+      "id": "174",
+      "name": "prelims1",
+      "description": "Prelims"
+     },
+     "matchNumber": 7,
+     "note": "Featherweight",
+     "judgesScores": "28-29 | 28-29 | 28-29",
+     "competitors": [
+      {
+       "id": "5346907",
+       "uid": "s:3301~a:5346907",
+       "type": "athlete",
+       "athlete": {
+        "id": "5346907",
+        "uid": "s:3301~a:5346907",
+        "firstName": "Ollie",
+        "lastName": "Schmid",
+        "displayName": "Ollie Schmid",
+        "fullName": "Ollie Schmid",
+        "shortName": "O. Schmid",
+        "displayHeight": "6' 0\"",
+        "displayWeight": "145 lbs",
+        "country": "Hungary",
+        "age": 25,
+        "gender": "MALE",
+        "displayReach": "71\"",
+        "stance": {
+         "id": "75",
+         "text": "Orthodox"
+        },
+        "weightClass": {
+         "id": "999",
+         "text": "Featherweight",
+         "shortName": "Featherweight",
+         "slug": "featherweight"
+        },
+        "color": "#CD2A3E",
+        "alternateColor": "#436F4D"
+       },
+       "order": 2,
+       "winner": true,
+       "displayRecord": "5-3-0",
+       "stats": [
+        {
+         "name": "knockDowns",
+         "displayName": "Knockdowns",
+         "shortDisplayName": "Knockdowns",
+         "description": "Knockdowns",
+         "abbreviation": "KD",
+         "value": 0.0,
+         "displayValue": "0"
+        },
+        {
+         "name": "totalStrikes",
+         "displayName": "totalStrikes",
+         "shortDisplayName": "totalStrikes",
+         "description": "totalStrikes",
+         "abbreviation": "totalStrikes",
+         "value": 72,
+         "displayValue": "72/166"
+        },
+        {
+         "name": "sigStrikes",
+         "displayName": "sigStrikes",
+         "shortDisplayName": "sigStrikes",
+         "description": "sigStrikes",
+         "abbreviation": "sigStrikes",
+         "value": 71,
+         "displayValue": "71/165"
+        },
+        {
+         "name": "headStrikes",
+         "displayName": "headStrikes",
+         "shortDisplayName": "headStrikes",
+         "description": "headStrikes",
+         "abbreviation": "headStrikes",
+         "value": 45,
+         "displayValue": "45/134"
+        },
+        {
+         "name": "bodyStrikes",
+         "displayName": "bodyStrikes",
+         "shortDisplayName": "bodyStrikes",
+         "description": "bodyStrikes",
+         "abbreviation": "bodyStrikes",
+         "value": 25,
+         "displayValue": "25/30"
+        },
+        {
+         "name": "legStrikes",
+         "displayName": "legStrikes",
+         "shortDisplayName": "legStrikes",
+         "description": "legStrikes",
+         "abbreviation": "legStrikes",
+         "value": 1,
+         "displayValue": "1/1"
+        },
+        {
+         "name": "timeInControl",
+         "displayName": "Time in Control",
+         "description": "Time in Control",
+         "abbreviation": "TIC",
+         "value": 23.0,
+         "displayValue": "0:23"
+        },
+        {
+         "name": "takedowns",
+         "displayName": "takedowns",
+         "shortDisplayName": "takedowns",
+         "description": "takedowns",
+         "abbreviation": "takedowns",
+         "value": 1,
+         "displayValue": "1/6"
+        },
+        {
+         "name": "submissions",
+         "displayName": "Submissions",
+         "shortDisplayName": "Submissions",
+         "description": "Submissions",
+         "abbreviation": "SM",
+         "value": 0.0,
+         "displayValue": "0"
+        }
+       ]
+      },
+      {
+       "id": "5327937",
+       "uid": "s:3301~a:5327937",
+       "type": "athlete",
+       "athlete": {
+        "id": "5327937",
+        "uid": "s:3301~a:5327937",
+        "firstName": "Keiichiro",
+        "lastName": "Nakamura",
+        "displayName": "Keiichiro Nakamura",
+        "fullName": "Keiichiro Nakamura",
+        "shortName": "K. Nakamura",
+        "displayHeight": "5' 10\"",
+        "displayWeight": "145 lbs",
+        "country": "Japan",
+        "age": 37,
+        "gender": "MALE",
+        "displayReach": "70\"",
+        "stance": {
+         "id": "76",
+         "text": "Southpaw"
+        },
+        "weightClass": {
+         "id": "999",
+         "text": "Featherweight",
+         "shortName": "Featherweight",
+         "slug": "featherweight"
+        },
+        "color": "#B00010",
+        "alternateColor": "#000000"
+       },
+       "order": 1,
+       "winner": false,
+       "displayRecord": "8-2-0",
+       "stats": [
+        {
+         "name": "knockDowns",
+         "displayName": "Knockdowns",
+         "shortDisplayName": "Knockdowns",
+         "description": "Knockdowns",
+         "abbreviation": "KD",
+         "value": 1.0,
+         "displayValue": "1"
+        },
+        {
+         "name": "totalStrikes",
+         "displayName": "totalStrikes",
+         "shortDisplayName": "totalStrikes",
+         "description": "totalStrikes",
+         "abbreviation": "totalStrikes",
+         "value": 101,
+         "displayValue": "101/198"
+        },
+        {
+         "name": "sigStrikes",
+         "displayName": "sigStrikes",
+         "shortDisplayName": "sigStrikes",
+         "description": "sigStrikes",
+         "abbreviation": "sigStrikes",
+         "value": 94,
+         "displayValue": "94/189"
+        },
+        {
+         "name": "headStrikes",
+         "displayName": "headStrikes",
+         "shortDisplayName": "headStrikes",
+         "description": "headStrikes",
+         "abbreviation": "headStrikes",
+         "value": 49,
+         "displayValue": "49/121"
+        },
+        {
+         "name": "bodyStrikes",
+         "displayName": "bodyStrikes",
+         "shortDisplayName": "bodyStrikes",
+         "description": "bodyStrikes",
+         "abbreviation": "bodyStrikes",
+         "value": 18,
+         "displayValue": "18/37"
+        },
+        {
+         "name": "legStrikes",
+         "displayName": "legStrikes",
+         "shortDisplayName": "legStrikes",
+         "description": "legStrikes",
+         "abbreviation": "legStrikes",
+         "value": 27,
+         "displayValue": "27/31"
+        },
+        {
+         "name": "timeInControl",
+         "displayName": "Time in Control",
+         "description": "Time in Control",
+         "abbreviation": "TIC",
+         "value": 17.0,
+         "displayValue": "0:17"
+        },
+        {
+         "name": "takedowns",
+         "displayName": "takedowns",
+         "shortDisplayName": "takedowns",
+         "description": "takedowns",
+         "abbreviation": "takedowns",
+         "value": 0,
+         "displayValue": "0/0"
+        },
+        {
+         "name": "submissions",
+         "displayName": "Submissions",
+         "shortDisplayName": "Submissions",
+         "description": "Submissions",
+         "abbreviation": "SM",
+         "value": 0.0,
+         "displayValue": "0"
+        }
+       ]
+      }
+     ],
+     "officials": [
+      {
+       "id": "2565498",
+       "firstName": "Herb",
+       "lastName": "Dean",
+       "position": {
+        "id": "42",
+        "name": "Referee",
+        "displayName": "Referee",
+        "leaf": false,
+        "slug": "referee"
+       },
+       "order": 0
+      },
+      {
+       "id": "2594091",
+       "firstName": "Chris",
+       "lastName": "Flores",
+       "position": {
+        "id": "41",
+        "name": "Judge",
+        "displayName": "Judge",
+        "leaf": false,
+        "slug": "judge"
+       },
+       "order": 1
+      },
+      {
+       "id": "4409191",
+       "firstName": "Eduardo Marques",
+       "lastName": "De Jesus Passos",
+       "position": {
+        "id": "41",
+        "name": "Judge",
+        "displayName": "Judge",
+        "leaf": false,
+        "slug": "judge"
+       },
+       "order": 2
+      },
+      {
+       "id": "4021253",
+       "firstName": "Ron",
+       "lastName": "McCarthy",
+       "position": {
+        "id": "41",
+        "name": "Judge",
+        "displayName": "Judge",
+        "leaf": false,
+        "slug": "judge"
+       },
+       "order": 3
+      }
+     ]
+    },
+    {
+     "id": "401932716",
+     "uid": "s:3301~l:3321~e:600061268~c:401932716",
+     "date": "2026-11-07T22:00:00.000+00:00",
+     "type": {
+      "id": "982",
+      "text": "Heavyweight",
+      "abbreviation": "Heavyweight"
+     },
+     "recent": false,
+     "status": {
+      "clock": "287.0",
+      "displayClock": "4:47",
+      "period": 3,
+      "type": {
+       "id": "3",
+       "name": "STATUS_FINAL",
+       "description": "Final",
+       "detail": "Final",
+       "shortDetail": "Final",
+       "state": "post",
+       "completed": true
+      },
+      "result": {
+       "id": "356",
+       "name": "kotko",
+       "displayName": "KO/TKO",
+       "shortDisplayName": "KO/TKO",
+       "description": "Punches",
+       "displayDescription": "Punches",
+       "target": {
+        "id": "122",
+        "name": "head",
+        "description": "Head",
+        "displayDescription": "Head"
+       }
+      },
+      "featured": false
+     },
+     "cardSegment": {
+      "id": "174",
+      "name": "prelims1",
+      "description": "Prelims"
+     },
+     "matchNumber": 8,
+     "note": "Heavyweight",
+     "competitors": [
+      {
+       "id": "4869702",
+       "uid": "s:3301~a:4869702",
+       "type": "athlete",
+       "athlete": {
+        "id": "4869702",
+        "uid": "s:3301~a:4869702",
+        "firstName": "Thomas",
+        "lastName": "Petersen",
+        "displayName": "Thomas Petersen",
+        "fullName": "Thomas Petersen",
+        "shortName": "T. Petersen",
+        "displayHeight": "6' 1\"",
+        "displayWeight": "253 lbs",
+        "country": "USA",
+        "age": 31,
+        "gender": "MALE",
+        "displayReach": "74\"",
+        "stance": {
+         "id": "76",
+         "text": "Southpaw"
+        },
+        "weightClass": {
+         "id": "982",
+         "text": "Heavyweight",
+         "shortName": "Heavyweight",
+         "slug": "heavyweight"
+        },
+        "color": "#3C3B6E",
+        "alternateColor": "#B22234"
+       },
+       "order": 2,
+       "winner": true,
+       "displayRecord": "12-5-0",
+       "stats": [
+        {
+         "name": "knockDowns",
+         "displayName": "Knockdowns",
+         "shortDisplayName": "Knockdowns",
+         "description": "Knockdowns",
+         "abbreviation": "KD",
+         "value": 1.0,
+         "displayValue": "1"
+        },
+        {
+         "name": "totalStrikes",
+         "displayName": "totalStrikes",
+         "shortDisplayName": "totalStrikes",
+         "description": "totalStrikes",
+         "abbreviation": "totalStrikes",
+         "value": 130,
+         "displayValue": "130/170"
+        },
+        {
+         "name": "sigStrikes",
+         "displayName": "sigStrikes",
+         "shortDisplayName": "sigStrikes",
+         "description": "sigStrikes",
+         "abbreviation": "sigStrikes",
+         "value": 57,
+         "displayValue": "57/80"
+        },
+        {
+         "name": "headStrikes",
+         "displayName": "headStrikes",
+         "shortDisplayName": "headStrikes",
+         "description": "headStrikes",
+         "abbreviation": "headStrikes",
+         "value": 57,
+         "displayValue": "57/80"
+        },
+        {
+         "name": "bodyStrikes",
+         "displayName": "bodyStrikes",
+         "shortDisplayName": "bodyStrikes",
+         "description": "bodyStrikes",
+         "abbreviation": "bodyStrikes",
+         "value": 0,
+         "displayValue": "0/0"
+        },
+        {
+         "name": "legStrikes",
+         "displayName": "legStrikes",
+         "shortDisplayName": "legStrikes",
+         "description": "legStrikes",
+         "abbreviation": "legStrikes",
+         "value": 0,
+         "displayValue": "0/0"
+        },
+        {
+         "name": "timeInControl",
+         "displayName": "Time in Control",
+         "description": "Time in Control",
+         "abbreviation": "TIC",
+         "value": 418.0,
+         "displayValue": "6:58"
+        },
+        {
+         "name": "takedowns",
+         "displayName": "takedowns",
+         "shortDisplayName": "takedowns",
+         "description": "takedowns",
+         "abbreviation": "takedowns",
+         "value": 2,
+         "displayValue": "2/2"
+        },
+        {
+         "name": "submissions",
+         "displayName": "Submissions",
+         "shortDisplayName": "Submissions",
+         "description": "Submissions",
+         "abbreviation": "SM",
+         "value": 1.0,
+         "displayValue": "1"
+        }
+       ]
+      },
+      {
+       "id": "5215710",
+       "uid": "s:3301~a:5215710",
+       "type": "athlete",
+       "athlete": {
+        "id": "5215710",
+        "uid": "s:3301~a:5215710",
+        "firstName": "Gabriel",
+        "lastName": "Lorenço",
+        "displayName": "Gabriel Lorenço",
+        "fullName": "Gabriel Lorenço",
+        "shortName": "G. Lorenço",
+        "displayHeight": "6' 2\"",
+        "displayWeight": "234 lbs",
+        "country": "Brazil",
+        "age": 27,
+        "gender": "MALE",
+        "displayReach": "76\"",
+        "stance": {
+         "id": "75",
+         "text": "Orthodox"
+        },
+        "weightClass": {
+         "id": "982",
+         "text": "Heavyweight",
+         "shortName": "Heavyweight",
+         "slug": "heavyweight"
+        },
+        "color": "#FFDF00",
+        "alternateColor": "#002776"
+       },
+       "order": 1,
+       "winner": false,
+       "displayRecord": "8-2-0",
+       "stats": [
+        {
+         "name": "knockDowns",
+         "displayName": "Knockdowns",
+         "shortDisplayName": "Knockdowns",
+         "description": "Knockdowns",
+         "abbreviation": "KD",
+         "value": 1.0,
+         "displayValue": "1"
+        },
+        {
+         "name": "totalStrikes",
+         "displayName": "totalStrikes",
+         "shortDisplayName": "totalStrikes",
+         "description": "totalStrikes",
+         "abbreviation": "totalStrikes",
+         "value": 97,
+         "displayValue": "97/139"
+        },
+        {
+         "name": "sigStrikes",
+         "displayName": "sigStrikes",
+         "shortDisplayName": "sigStrikes",
+         "description": "sigStrikes",
+         "abbreviation": "sigStrikes",
+         "value": 53,
+         "displayValue": "53/89"
+        },
+        {
+         "name": "headStrikes",
+         "displayName": "headStrikes",
+         "shortDisplayName": "headStrikes",
+         "description": "headStrikes",
+         "abbreviation": "headStrikes",
+         "value": 31,
+         "displayValue": "31/59"
+        },
+        {
+         "name": "bodyStrikes",
+         "displayName": "bodyStrikes",
+         "shortDisplayName": "bodyStrikes",
+         "description": "bodyStrikes",
+         "abbreviation": "bodyStrikes",
+         "value": 16,
+         "displayValue": "16/22"
+        },
+        {
+         "name": "legStrikes",
+         "displayName": "legStrikes",
+         "shortDisplayName": "legStrikes",
+         "description": "legStrikes",
+         "abbreviation": "legStrikes",
+         "value": 6,
+         "displayValue": "6/8"
+        },
+        {
+         "name": "timeInControl",
+         "displayName": "Time in Control",
+         "description": "Time in Control",
+         "abbreviation": "TIC",
+         "value": 121.0,
+         "displayValue": "2:01"
+        },
+        {
+         "name": "takedowns",
+         "displayName": "takedowns",
+         "shortDisplayName": "takedowns",
+         "description": "takedowns",
+         "abbreviation": "takedowns",
+         "value": 0,
+         "displayValue": "0/0"
+        },
+        {
+         "name": "submissions",
+         "displayName": "Submissions",
+         "shortDisplayName": "Submissions",
+         "description": "Submissions",
+         "abbreviation": "SM",
+         "value": 0.0,
+         "displayValue": "0"
+        }
+       ]
+      }
+     ],
+     "officials": [
+      {
+       "id": "2594378",
+       "firstName": "Chris",
+       "lastName": "Tognoni",
+       "position": {
+        "id": "42",
+        "name": "Referee",
+        "displayName": "Referee",
+        "leaf": false,
+        "slug": "referee"
+       },
+       "order": 0
+      },
+      {
+       "id": "4410607",
+       "firstName": "Judge",
+       "lastName": "1",
+       "position": {
+        "id": "41",
+        "name": "Judge",
+        "displayName": "Judge",
+        "leaf": false,
+        "slug": "judge"
+       },
+       "order": 1
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

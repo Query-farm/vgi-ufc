@@ -1,0 +1,1764 @@
+{
+ "leagues": [
+  {
+   "id": "3321",
+   "uid": "s:3301~l:3321",
+   "name": "Ultimate Fighting Championship",
+   "displayName": "UFC",
+   "abbreviation": "UFC",
+   "shortName": "UFC",
+   "slug": "ufc",
+   "season": {
+    "year": 2026,
+    "startDate": "2026-01-01T08:00Z",
+    "endDate": "2026-12-31T08:00Z",
+    "displayName": "2026",
+    "type": {
+     "id": "2",
+     "type": 2,
+     "name": "Regular Season",
+     "abbreviation": "reg"
+    }
+   },
+   "calendarType": "list",
+   "calendarIsWhitelist": true,
+   "calendarStartDate": "2026-01-01T08:00Z",
+   "calendarEndDate": "2026-12-31T08:00Z",
+   "calendar": [
+    {
+     "label": "UFC 324: Gaethje vs. Pimblett",
+     "startDate": "2026-01-25T01:30Z",
+     "endDate": "2026-01-25T07:59Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/mma/leagues/ufc/events/600057024?lang=en&region=us"
+     }
+    },
+    {
+     "label": "UFC 325: Volkanovski vs. Lopes 2",
+     "startDate": "2026-02-01T01:00Z",
+     "endDate": "2026-02-01T07:59Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/mma/leagues/ufc/events/600057025?lang=en&region=us"
+     }
+    },
+    {
+     "label": "UFC Fight Night: Bautista vs. Oliveira",
+     "startDate": "2026-02-08T01:00Z",
+     "endDate": "2026-02-08T07:59Z",
+     "event": {
+      "$ref": "http://sports.core.api.espn.pvt/v2/sports/mma/leagues/ufc/events/600057328?lang=en&region=us"
+     }
+    }
+   ]
+  }
+ ],
+ "events": [
+  {
+   "id": "600057024",
+   "uid": "s:3301~l:3321~e:600057024",
+   "date": "2026-01-24T22:30Z",
+   "name": "UFC 324: Gaethje vs. Pimblett",
+   "shortName": "UFC 324",
+   "season": {
+    "year": 2026,
+    "type": 2,
+    "slug": "regular-season"
+   },
+   "competitions": [
+    {
+     "id": "401848704",
+     "uid": "s:3301~l:3321~e:600057024~c:401848704",
+     "date": "2026-01-24T22:30Z",
+     "endDate": "2026-01-24T22:30Z",
+     "type": {
+      "id": "969",
+      "abbreviation": "Welterweight"
+     },
+     "timeValid": true,
+     "neutralSite": false,
+     "playByPlayAvailable": true,
+     "recent": false,
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     },
+     "competitors": [
+      {
+       "id": "4408375",
+       "uid": "s:3301~a:4408375",
+       "type": "athlete",
+       "order": 1,
+       "winner": false,
+       "athlete": {
+        "fullName": "Adam Fugitt",
+        "displayName": "Adam Fugitt",
+        "shortName": "A. Fugitt"
+       },
+       "statistics": [],
+       "records": [
+        {
+         "name": "overall",
+         "abbreviation": "TOT",
+         "type": "total",
+         "summary": "10-6-0"
+        }
+       ]
+      },
+      {
+       "id": "5290957",
+       "uid": "s:3301~a:5290957",
+       "type": "athlete",
+       "order": 2,
+       "winner": true,
+       "athlete": {
+        "fullName": "Ty Miller",
+        "displayName": "Ty Miller",
+        "shortName": "T. Miller"
+       },
+       "statistics": [],
+       "records": [
+        {
+         "name": "overall",
+         "abbreviation": "TOT",
+         "type": "total",
+         "summary": "8-0-0"
+        }
+       ]
+      }
+     ],
+     "status": {
+      "clock": 299.0,
+      "displayClock": "4:59",
+      "period": 1,
+      "type": {
+       "id": "3",
+       "name": "STATUS_FINAL",
+       "state": "post",
+       "completed": true,
+       "description": "Final",
+       "detail": "Final",
+       "shortDetail": "Final"
+      },
+      "featured": false
+     },
+     "broadcasts": [
+      {
+       "market": "national",
+       "names": [
+        "Paramount+"
+       ]
+      }
+     ],
+     "details": [
+      {
+       "id": "10977",
+       "type": {
+        "id": "23",
+        "text": "Results"
+       }
+      },
+      {
+       "id": "10976",
+       "type": {
+        "id": "21",
+        "text": "Unofficial Winner Kotko"
+       }
+      },
+      {
+       "id": "10975",
+       "type": {
+        "id": "19",
+        "text": "Fight Over"
+       }
+      },
+      {
+       "id": "10974",
+       "type": {
+        "id": "18",
+        "text": "Round End"
+       }
+      },
+      {
+       "id": "10973",
+       "type": {
+        "id": "17",
+        "text": "Knockdown"
+       }
+      },
+      {
+       "id": "10972",
+       "type": {
+        "id": "12",
+        "text": "Takedown Attempt"
+       }
+      },
+      {
+       "id": "10971",
+       "type": {
+        "id": "12",
+        "text": "Takedown Attempt"
+       }
+      },
+      {
+       "id": "10970",
+       "type": {
+        "id": "5",
+        "text": "Round Start"
+       }
+      },
+      {
+       "id": "10969",
+       "type": {
+        "id": "4",
+        "text": "Staredown"
+       }
+      },
+      {
+       "id": "10968",
+       "type": {
+        "id": "3",
+        "text": "Tale of the tape"
+       }
+      }
+     ],
+     "format": {
+      "regulation": {
+       "periods": 3
+      }
+     },
+     "startDate": "2026-01-24T22:30Z",
+     "broadcast": "Paramount+"
+    },
+    {
+     "id": "401838587",
+     "uid": "s:3301~l:3321~e:600057024~c:401838587",
+     "date": "2026-01-24T22:30Z",
+     "endDate": "2026-01-24T22:30Z",
+     "type": {
+      "id": "982",
+      "abbreviation": "Heavyweight"
+     },
+     "timeValid": true,
+     "neutralSite": false,
+     "playByPlayAvailable": true,
+     "recent": false,
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     },
+     "competitors": [
+      {
+       "id": "4049391",
+       "uid": "s:3301~a:4049391",
+       "type": "athlete",
+       "order": 1,
+       "winner": true,
+       "athlete": {
+        "fullName": "Josh Hokit",
+        "displayName": "Josh Hokit",
+        "shortName": "J. Hokit"
+       },
+       "statistics": [],
+       "records": [
+        {
+         "name": "overall",
+         "abbreviation": "TOT",
+         "type": "total",
+         "summary": "10-0-0"
+        }
+       ]
+      },
+      {
+       "id": "4848646",
+       "uid": "s:3301~a:4848646",
+       "type": "athlete",
+       "order": 2,
+       "winner": false,
+       "athlete": {
+        "fullName": "Denzel Freeman",
+        "displayName": "Denzel Freeman",
+        "shortName": "D. Freeman"
+       },
+       "statistics": [],
+       "records": [
+        {
+         "name": "overall",
+         "abbreviation": "TOT",
+         "type": "total",
+         "summary": "7-2-0"
+        }
+       ]
+      }
+     ],
+     "status": {
+      "clock": 299.0,
+      "displayClock": "4:59",
+      "period": 1,
+      "type": {
+       "id": "3",
+       "name": "STATUS_FINAL",
+       "state": "post",
+       "completed": true,
+       "description": "Final",
+       "detail": "Final",
+       "shortDetail": "Final"
+      },
+      "featured": false
+     },
+     "broadcasts": [
+      {
+       "market": "national",
+       "names": [
+        "Paramount+"
+       ]
+      }
+     ],
+     "details": [
+      {
+       "id": "10991",
+       "type": {
+        "id": "23",
+        "text": "Results"
+       }
+      },
+      {
+       "id": "10990",
+       "type": {
+        "id": "21",
+        "text": "Unofficial Winner Kotko"
+       }
+      },
+      {
+       "id": "10989",
+       "type": {
+        "id": "19",
+        "text": "Fight Over"
+       }
+      },
+      {
+       "id": "10988",
+       "type": {
+        "id": "18",
+        "text": "Round End"
+       }
+      },
+      {
+       "id": "10987",
+       "type": {
+        "id": "12",
+        "text": "Takedown Attempt"
+       }
+      },
+      {
+       "id": "10986",
+       "type": {
+        "id": "12",
+        "text": "Takedown Attempt"
+       }
+      },
+      {
+       "id": "10985",
+       "type": {
+        "id": "13",
+        "text": "Takedown"
+       }
+      },
+      {
+       "id": "10984",
+       "type": {
+        "id": "12",
+        "text": "Takedown Attempt"
+       }
+      },
+      {
+       "id": "10983",
+       "type": {
+        "id": "5",
+        "text": "Round Start"
+       }
+      },
+      {
+       "id": "10982",
+       "type": {
+        "id": "4",
+        "text": "Staredown"
+       }
+      }
+     ],
+     "format": {
+      "regulation": {
+       "periods": 3
+      }
+     },
+     "startDate": "2026-01-24T22:30Z",
+     "broadcast": "Paramount+"
+    }
+   ],
+   "venues": [
+    {
+     "id": "5060",
+     "fullName": "T-Mobile Arena",
+     "address": {
+      "city": "Las Vegas",
+      "state": "NV",
+      "address1": "3780 South Las Vegas Boulevard",
+      "country": "USA"
+     }
+    }
+   ],
+   "status": {
+    "type": {
+     "id": "3",
+     "name": "STATUS_FINAL",
+     "state": "post",
+     "completed": true,
+     "description": "Final",
+     "detail": "Final",
+     "shortDetail": "Final"
+    }
+   }
+  },
+  {
+   "id": "600061268",
+   "uid": "s:3301~l:3321~e:600061268",
+   "date": "2026-11-07T22:00Z",
+   "name": "UFC Fight Night: Cortes Acosta vs. Walker",
+   "shortName": "UFC Fight Night",
+   "season": {
+    "year": 2026,
+    "type": 2,
+    "slug": "regular-season"
+   },
+   "competitions": [
+    {
+     "id": "401928118",
+     "uid": "s:3301~l:3321~e:600061268~c:401928118",
+     "date": "2026-11-07T22:00Z",
+     "endDate": "2026-11-07T22:00Z",
+     "type": {
+      "id": "969",
+      "abbreviation": "Welterweight"
+     },
+     "timeValid": true,
+     "neutralSite": false,
+     "playByPlayAvailable": true,
+     "recent": false,
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     },
+     "competitors": [
+      {
+       "id": "4880114",
+       "uid": "s:3301~a:4880114",
+       "type": "athlete",
+       "order": 1,
+       "winner": false,
+       "athlete": {
+        "fullName": "Jonny Parsons",
+        "displayName": "Jonny Parsons",
+        "shortName": "J. Parsons"
+       },
+       "statistics": [],
+       "records": [
+        {
+         "name": "overall",
+         "abbreviation": "TOT",
+         "type": "total",
+         "summary": "9-4-0"
+        }
+       ]
+      },
+      {
+       "id": "5080485",
+       "uid": "s:3301~a:5080485",
+       "type": "athlete",
+       "order": 2,
+       "winner": true,
+       "athlete": {
+        "fullName": "José Souza",
+        "displayName": "José Souza",
+        "shortName": "J. Souza"
+       },
+       "statistics": [],
+       "records": [
+        {
+         "name": "overall",
+         "abbreviation": "TOT",
+         "type": "total",
+         "summary": "10-1-0"
+        }
+       ]
+      }
+     ],
+     "status": {
+      "clock": 256.0,
+      "displayClock": "4:16",
+      "period": 1,
+      "type": {
+       "id": "3",
+       "name": "STATUS_FINAL",
+       "state": "post",
+       "completed": true,
+       "description": "Final",
+       "detail": "Final",
+       "shortDetail": "Final"
+      },
+      "featured": false
+     },
+     "broadcasts": [
+      {
+       "market": "national",
+       "names": [
+        "Paramount+"
+       ]
+      }
+     ],
+     "details": [
+      {
+       "id": "26191",
+       "type": {
+        "id": "21",
+        "text": "Unofficial Winner Kotko"
+       }
+      },
+      {
+       "id": "26190",
+       "type": {
+        "id": "23",
+        "text": "Results"
+       }
+      },
+      {
+       "id": "26178",
+       "type": {
+        "id": "19",
+        "text": "Fight Over"
+       }
+      },
+      {
+       "id": "26177",
+       "type": {
+        "id": "18",
+        "text": "Round End"
+       }
+      },
+      {
+       "id": "26176",
+       "type": {
+        "id": "17",
+        "text": "Knockdown"
+       }
+      },
+      {
+       "id": "26175",
+       "type": {
+        "id": "5",
+        "text": "Round Start"
+       }
+      },
+      {
+       "id": "26174",
+       "type": {
+        "id": "4",
+        "text": "Staredown"
+       }
+      },
+      {
+       "id": "26173",
+       "type": {
+        "id": "3",
+        "text": "Tale of the tape"
+       }
+      },
+      {
+       "id": "26172",
+       "type": {
+        "id": "2",
+        "text": "Walkout"
+       }
+      },
+      {
+       "id": "26171",
+       "type": {
+        "id": "2",
+        "text": "Walkout"
+       }
+      }
+     ],
+     "format": {
+      "regulation": {
+       "periods": 3
+      }
+     },
+     "startDate": "2026-11-07T22:00Z",
+     "broadcast": "Paramount+"
+    },
+    {
+     "id": "401928117",
+     "uid": "s:3301~l:3321~e:600061268~c:401928117",
+     "date": "2026-11-07T22:00Z",
+     "endDate": "2026-11-07T22:00Z",
+     "type": {
+      "id": "969",
+      "abbreviation": "Welterweight"
+     },
+     "timeValid": true,
+     "neutralSite": false,
+     "playByPlayAvailable": true,
+     "recent": false,
+     "venue": {
+      "id": "6176",
+      "fullName": "Meta APEX",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "country": "USA"
+      },
+      "indoor": true
+     },
+     "competitors": [
+      {
+       "id": "4426282",
+       "uid": "s:3301~a:4426282",
+       "type": "athlete",
+       "order": 2,
+       "winner": false,
+       "athlete": {
+        "fullName": "Wellington Turman",
+        "displayName": "Wellington Turman",
+        "shortName": "W. Turman"
+       },
+       "linescores": [
+        {
+         "value": 81.0,
+         "displayValue": "81.0",
+         "period": 0,
+         "linescores": [
+          {
+           "value": 27.0,
+           "displayValue": "27",
+           "period": 0
+          },
+          {
+           "value": 27.0,
+           "displayValue": "27",
+           "period": 0
+          },
+          {
+           "value": 27.0,
+           "displayValue": "27",
+           "period": 0
+          }
+         ]
+        }
+       ],
+       "statistics": [],
+       "records": [
+        {
+         "name": "overall",
+         "abbreviation": "TOT",
+         "type": "total",
+         "summary": "18-9-0"
+        }
+       ]
+      },
+      {
+       "id": "4701954",
+       "uid": "s:3301~a:4701954",
+       "type": "athlete",
+       "order": 1,
+       "winner": true,
+       "athlete": {
+        "fullName": "Seokhyeon Ko",
+        "displayName": "Seokhyeon Ko",
+        "shortName": "S. Ko"
+       },
+       "linescores": [
+        {
+         "value": 90.0,
+         "displayValue": "90.0",
+         "period": 0,
+         "linescores": [
+          {
+           "value": 30.0,
+           "displayValue": "30",
+           "period": 0
+          },
+          {
+           "value": 30.0,
+           "displayValue": "30",
+           "period": 0
+          },
+          {
+           "value": 30.0,
+           "displayValue": "30",
+           "period": 0
+          }
+         ]
+        }
+       ],
+       "statistics": [],
+       "records": [
+        {
+         "name": "overall",
+         "abbreviation": "TOT",
+         "type": "total",
+         "summary": "14-3-0"
+        }
+       ]
+      }
+     ],
+     "status": {
+      "clock": 300.0,
+      "displayClock": "5:00",
+      "period": 3,
+      "type": {
+       "id": "3",
+       "name": "STATUS_FINAL",
+       "state": "post",
+       "completed": true,
+       "description": "Final",
+       "detail": "Final",
+       "shortDetail": "Final"
+      },
+      "featured": false
+     },
+     "broadcasts": [
+      {
+       "market": "national",
+       "names": [
+        "Paramount+"
+       ]
+      }
+     ],
+     "details": [
+      {
+       "id": "26204",
+       "type": {
+        "id": "22",
+        "text": "Unofficial Winner Decision"
+       }
+      },
+      {
+       "id": "26203",
+       "type": {
+        "id": "23",
+        "text": "Results"
+       }
+      },
+      {
+       "id": "26202",
+       "type": {
+        "id": "19",
+        "text": "Fight Over"
+       }
+      },
+      {
+       "id": "26201",
+       "type": {
+        "id": "18",
+        "text": "Round End"
+       }
+      },
+      {
+       "id": "26200",
+       "type": {
+        "id": "13",
+        "text": "Takedown"
+       }
+      },
+      {
+       "id": "26199",
+       "type": {
+        "id": "12",
+        "text": "Takedown Attempt"
+       }
+      },
+      {
+       "id": "26198",
+       "type": {
+        "id": "12",
+        "text": "Takedown Attempt"
+       }
+      },
+      {
+       "id": "26197",
+       "type": {
+        "id": "13",
+        "text": "Takedown"
+       }
+      },
+      {
+       "id": "26196",
+       "type": {
+        "id": "12",
+        "text": "Takedown Attempt"
+       }
+      },
+      {
+       "id": "26195",
+       "type": {
+        "id": "12",
+        "text": "Takedown Attempt"
+       }
+      }
+     ],
+     "format": {
+      "regulation": {
+       "periods": 3
+      }
+     },
+     "startDate": "2026-11-07T22:00Z",
+     "broadcast": "Paramount+"
+    }
+   ],
+   "venues": [
+    {
+     "id": "6176",
+     "fullName": "Meta APEX",
+     "address": {
+      "city": "Las Vegas",
+      "state": "NV",
+      "country": "USA"
+     }
+    }
+   ],
+   "status": {
+    "type": {
+     "id": "3",
+     "name": "STATUS_FINAL",
+     "state": "post",
+     "completed": true,
+     "description": "Final",
+     "detail": "Final",
+     "shortDetail": "Final"
+    }
+   }
+  },
+  {
+   "id": "600061400",
+   "uid": "s:3301~l:3321~e:600061400",
+   "date": "2026-11-14T22:00Z",
+   "name": "UFC 334: Gane vs. Hokit",
+   "shortName": "UFC 334",
+   "season": {
+    "year": 2026,
+    "type": 2,
+    "slug": "regular-season"
+   },
+   "competitions": [
+    {
+     "id": "401932013",
+     "uid": "s:3301~l:3321~e:600061400~c:401932013",
+     "date": "2026-11-14T22:00Z",
+     "endDate": "2026-11-14T22:00Z",
+     "type": {
+      "id": "986",
+      "abbreviation": "Lightweight"
+     },
+     "timeValid": true,
+     "neutralSite": false,
+     "playByPlayAvailable": false,
+     "recent": false,
+     "venue": {
+      "id": "1830",
+      "fullName": "Madison Square Garden",
+      "address": {
+       "city": "New York",
+       "state": "NY",
+       "address1": "Madison Square Garden, Two Pennsylvania Plaza",
+       "country": "USA"
+      },
+      "indoor": true
+     },
+     "competitors": [
+      {
+       "id": "5037883",
+       "uid": "s:3301~a:5037883",
+       "type": "athlete",
+       "order": 1,
+       "winner": false,
+       "athlete": {
+        "fullName": "Evan Elder",
+        "displayName": "Evan Elder",
+        "shortName": "E. Elder"
+       },
+       "records": [
+        {
+         "name": "overall",
+         "abbreviation": "TOT",
+         "type": "total",
+         "summary": "10-2-0"
+        }
+       ]
+      },
+      {
+       "id": "5293557",
+       "uid": "s:3301~a:5293557",
+       "type": "athlete",
+       "order": 2,
+       "winner": false,
+       "athlete": {
+        "fullName": "Samuel Sanches",
+        "displayName": "Samuel Sanches",
+        "shortName": "S. Sanches"
+       },
+       "records": [
+        {
+         "name": "overall",
+         "abbreviation": "TOT",
+         "type": "total",
+         "summary": "11-1-0"
+        }
+       ]
+      }
+     ],
+     "status": {
+      "clock": 0.0,
+      "displayClock": "-",
+      "period": 0,
+      "type": {
+       "id": "1",
+       "name": "STATUS_SCHEDULED",
+       "state": "pre",
+       "completed": false,
+       "description": "Scheduled",
+       "detail": "Sat, November 14th at 5:00 PM EST",
+       "shortDetail": "11/14 - 5:00 PM EST"
+      }
+     },
+     "broadcasts": [
+      {
+       "market": "national",
+       "names": [
+        "Paramount+"
+       ]
+      }
+     ],
+     "format": {
+      "regulation": {
+       "periods": 3
+      }
+     },
+     "startDate": "2026-11-14T22:00Z",
+     "broadcast": "Paramount+"
+    },
+    {
+     "id": "401922645",
+     "uid": "s:3301~l:3321~e:600061400~c:401922645",
+     "date": "2026-11-14T22:00Z",
+     "endDate": "2026-11-14T22:00Z",
+     "type": {
+      "id": "1003",
+      "abbreviation": "W Bantamweight"
+     },
+     "timeValid": true,
+     "neutralSite": false,
+     "playByPlayAvailable": false,
+     "recent": false,
+     "venue": {
+      "id": "1830",
+      "fullName": "Madison Square Garden",
+      "address": {
+       "city": "New York",
+       "state": "NY",
+       "address1": "Madison Square Garden, Two Pennsylvania Plaza",
+       "country": "USA"
+      },
+      "indoor": true
+     },
+     "competitors": [
+      {
+       "id": "4334306",
+       "uid": "s:3301~a:4334306",
+       "type": "athlete",
+       "order": 1,
+       "winner": false,
+       "athlete": {
+        "fullName": "Macy Chiasson",
+        "displayName": "Macy Chiasson",
+        "shortName": "M. Chiasson"
+       },
+       "records": [
+        {
+         "name": "overall",
+         "abbreviation": "TOT",
+         "type": "total",
+         "summary": "11-6-0"
+        }
+       ]
+      },
+      {
+       "id": "5310274",
+       "uid": "s:3301~a:5310274",
+       "type": "athlete",
+       "order": 2,
+       "winner": false,
+       "athlete": {
+        "fullName": "Bia Mesquita",
+        "displayName": "Bia Mesquita",
+        "shortName": "B. Mesquita"
+       },
+       "records": [
+        {
+         "name": "overall",
+         "abbreviation": "TOT",
+         "type": "total",
+         "summary": "8-0-0"
+        }
+       ]
+      }
+     ],
+     "status": {
+      "clock": 0.0,
+      "displayClock": "-",
+      "period": 0,
+      "type": {
+       "id": "1",
+       "name": "STATUS_SCHEDULED",
+       "state": "pre",
+       "completed": false,
+       "description": "Scheduled",
+       "detail": "Sat, November 14th at 5:00 PM EST",
+       "shortDetail": "11/14 - 5:00 PM EST"
+      }
+     },
+     "broadcasts": [
+      {
+       "market": "national",
+       "names": [
+        "Paramount+"
+       ]
+      }
+     ],
+     "format": {
+      "regulation": {
+       "periods": 3
+      }
+     },
+     "startDate": "2026-11-14T22:00Z",
+     "broadcast": "Paramount+"
+    }
+   ],
+   "venues": [
+    {
+     "id": "1830",
+     "fullName": "Madison Square Garden",
+     "address": {
+      "city": "New York",
+      "state": "NY",
+      "address1": "Madison Square Garden, Two Pennsylvania Plaza",
+      "country": "USA"
+     }
+    }
+   ],
+   "status": {
+    "type": {
+     "id": "1",
+     "name": "STATUS_SCHEDULED",
+     "state": "pre",
+     "completed": false,
+     "description": "Scheduled",
+     "detail": "Scheduled",
+     "shortDetail": "Scheduled"
+    }
+   }
+  },
+  {
+   "id": "600061665",
+   "uid": "s:3301~l:3321~e:600061665",
+   "date": "2026-11-21T15:00Z",
+   "name": "UFC Fight Night: Procházka vs. Stirling",
+   "shortName": "UFC Fight Night",
+   "season": {
+    "year": 2026,
+    "type": 2,
+    "slug": "regular-season"
+   },
+   "competitions": [
+    {
+     "id": "401927853",
+     "uid": "s:3301~l:3321~e:600061665~c:401927853",
+     "date": "2026-11-21T15:00Z",
+     "endDate": "2026-11-21T15:00Z",
+     "type": {
+      "id": "969",
+      "abbreviation": "Welterweight"
+     },
+     "timeValid": true,
+     "neutralSite": false,
+     "playByPlayAvailable": false,
+     "recent": false,
+     "venue": {
+      "id": "11560",
+      "fullName": "ABHA Arena",
+      "address": {
+       "city": "Doha",
+       "country": "Qatar"
+      },
+      "indoor": true
+     },
+     "competitors": [
+      {
+       "id": "3089915",
+       "uid": "s:3301~a:3089915",
+       "type": "athlete",
+       "order": 1,
+       "winner": false,
+       "athlete": {
+        "fullName": "Jake Matthews",
+        "displayName": "Jake Matthews",
+        "shortName": "J. Matthews"
+       },
+       "records": [
+        {
+         "name": "overall",
+         "abbreviation": "TOT",
+         "type": "total",
+         "summary": "23-8-0"
+        }
+       ]
+      },
+      {
+       "id": "4394753",
+       "uid": "s:3301~a:4394753",
+       "type": "athlete",
+       "order": 2,
+       "winner": false,
+       "athlete": {
+        "fullName": "Tahir Abdullayev",
+        "displayName": "Tahir Abdullayev",
+        "shortName": "T. Abdullayev"
+       },
+       "records": [
+        {
+         "name": "overall",
+         "abbreviation": "TOT",
+         "type": "total",
+         "summary": "20-3-0"
+        }
+       ]
+      }
+     ],
+     "status": {
+      "clock": 0.0,
+      "displayClock": "-",
+      "period": 0,
+      "type": {
+       "id": "1",
+       "name": "STATUS_SCHEDULED",
+       "state": "pre",
+       "completed": false,
+       "description": "Scheduled",
+       "detail": "Sat, November 21st at 10:00 AM EST",
+       "shortDetail": "11/21 - 10:00 AM EST"
+      }
+     },
+     "broadcasts": [
+      {
+       "market": "national",
+       "names": [
+        "Paramount+"
+       ]
+      }
+     ],
+     "format": {
+      "regulation": {
+       "periods": 3
+      }
+     },
+     "startDate": "2026-11-21T15:00Z",
+     "broadcast": "Paramount+"
+    },
+    {
+     "id": "401927856",
+     "uid": "s:3301~l:3321~e:600061665~c:401927856",
+     "date": "2026-11-21T15:00Z",
+     "endDate": "2026-11-21T15:00Z",
+     "type": {
+      "id": "956",
+      "abbreviation": "Flyweight"
+     },
+     "timeValid": true,
+     "neutralSite": false,
+     "playByPlayAvailable": false,
+     "recent": false,
+     "venue": {
+      "id": "11560",
+      "fullName": "ABHA Arena",
+      "address": {
+       "city": "Doha",
+       "country": "Qatar"
+      },
+      "indoor": true
+     },
+     "competitors": [
+      {
+       "id": "4684848",
+       "uid": "s:3301~a:4684848",
+       "type": "athlete",
+       "order": 1,
+       "winner": false,
+       "athlete": {
+        "fullName": "Amir Albazi",
+        "displayName": "Amir Albazi",
+        "shortName": "A. Albazi"
+       },
+       "records": [
+        {
+         "name": "overall",
+         "abbreviation": "TOT",
+         "type": "total",
+         "summary": "17-3-0"
+        }
+       ]
+      },
+      {
+       "id": "5074121",
+       "uid": "s:3301~a:5074121",
+       "type": "athlete",
+       "order": 2,
+       "winner": false,
+       "athlete": {
+        "fullName": "Alessandro Costa",
+        "displayName": "Alessandro Costa",
+        "shortName": "A. Costa"
+       },
+       "records": [
+        {
+         "name": "overall",
+         "abbreviation": "TOT",
+         "type": "total",
+         "summary": "17-5-0"
+        }
+       ]
+      }
+     ],
+     "status": {
+      "clock": 0.0,
+      "displayClock": "-",
+      "period": 0,
+      "type": {
+       "id": "1",
+       "name": "STATUS_SCHEDULED",
+       "state": "pre",
+       "completed": false,
+       "description": "Scheduled",
+       "detail": "Sat, November 21st at 10:00 AM EST",
+       "shortDetail": "11/21 - 10:00 AM EST"
+      }
+     },
+     "broadcasts": [
+      {
+       "market": "national",
+       "names": [
+        "Paramount+"
+       ]
+      }
+     ],
+     "format": {
+      "regulation": {
+       "periods": 3
+      }
+     },
+     "startDate": "2026-11-21T15:00Z",
+     "broadcast": "Paramount+"
+    }
+   ],
+   "venues": [
+    {
+     "id": "11560",
+     "fullName": "ABHA Arena",
+     "address": {
+      "city": "Doha",
+      "country": "Qatar"
+     }
+    }
+   ],
+   "status": {
+    "type": {
+     "id": "1",
+     "name": "STATUS_SCHEDULED",
+     "state": "pre",
+     "completed": false,
+     "description": "Scheduled",
+     "detail": "Scheduled",
+     "shortDetail": "Scheduled"
+    }
+   }
+  },
+  {
+   "id": "600062700",
+   "uid": "s:3301~l:3321~e:600062700",
+   "date": "2026-12-05T15:00Z",
+   "name": "UFC Fight Night: Adesanya vs Magomedov",
+   "shortName": "UFC Fight Night",
+   "season": {
+    "year": 2026,
+    "type": 2,
+    "slug": "regular-season"
+   },
+   "competitions": [
+    {
+     "id": "401933606",
+     "uid": "s:3301~l:3321~e:600062700~c:401933606",
+     "date": "2026-12-05T15:00Z",
+     "endDate": "2026-12-05T15:00Z",
+     "type": {
+      "id": "970",
+      "abbreviation": "Bantamweight"
+     },
+     "timeValid": true,
+     "neutralSite": false,
+     "playByPlayAvailable": false,
+     "recent": false,
+     "venue": {
+      "id": "11170",
+      "fullName": "ANB Arena",
+      "address": {
+       "city": "Riyadh",
+       "country": "Saudi Arabia"
+      },
+      "indoor": true
+     },
+     "competitors": [
+      {
+       "id": "4905308",
+       "uid": "s:3301~a:4905308",
+       "type": "athlete",
+       "order": 1,
+       "winner": false,
+       "athlete": {
+        "fullName": "Abdul Hussein",
+        "displayName": "Abdul Hussein",
+        "shortName": "A. Hussein"
+       },
+       "records": [
+        {
+         "name": "overall",
+         "abbreviation": "TOT",
+         "type": "total",
+         "summary": "16-2-0"
+        }
+       ]
+      },
+      {
+       "id": "5236383",
+       "uid": "s:3301~a:5236383",
+       "type": "athlete",
+       "order": 2,
+       "winner": false,
+       "athlete": {
+        "fullName": "Hecher Sosa",
+        "displayName": "Hecher Sosa",
+        "shortName": "H. Sosa"
+       },
+       "records": [
+        {
+         "name": "overall",
+         "abbreviation": "TOT",
+         "type": "total",
+         "summary": "15-1-0"
+        }
+       ]
+      }
+     ],
+     "status": {
+      "clock": 0.0,
+      "displayClock": "-",
+      "period": 0,
+      "type": {
+       "id": "1",
+       "name": "STATUS_SCHEDULED",
+       "state": "pre",
+       "completed": false,
+       "description": "Scheduled",
+       "detail": "Sat, December 5th at 10:00 AM EST",
+       "shortDetail": "12/5 - 10:00 AM EST"
+      }
+     },
+     "broadcasts": [
+      {
+       "market": "national",
+       "names": [
+        "Paramount+"
+       ]
+      }
+     ],
+     "format": {
+      "regulation": {
+       "periods": 3
+      }
+     },
+     "startDate": "2026-12-05T15:00Z",
+     "broadcast": "Paramount+"
+    },
+    {
+     "id": "401933605",
+     "uid": "s:3301~l:3321~e:600062700~c:401933605",
+     "date": "2026-12-05T15:00Z",
+     "endDate": "2026-12-05T15:00Z",
+     "type": {
+      "id": "972",
+      "abbreviation": "Middleweight"
+     },
+     "timeValid": true,
+     "neutralSite": false,
+     "playByPlayAvailable": false,
+     "recent": false,
+     "venue": {
+      "id": "11170",
+      "fullName": "ANB Arena",
+      "address": {
+       "city": "Riyadh",
+       "country": "Saudi Arabia"
+      },
+      "indoor": true
+     },
+     "competitors": [
+      {
+       "id": "5013686",
+       "uid": "s:3301~a:5013686",
+       "type": "athlete",
+       "order": 2,
+       "winner": false,
+       "athlete": {
+        "fullName": "Matthieu Letho Duclos",
+        "displayName": "Matthieu Letho Duclos",
+        "shortName": "M. Letho Duclos"
+       },
+       "records": [
+        {
+         "name": "overall",
+         "abbreviation": "TOT",
+         "type": "total",
+         "summary": "11-3-0"
+        }
+       ]
+      },
+      {
+       "id": "5364355",
+       "uid": "s:3301~a:5364355",
+       "type": "athlete",
+       "order": 1,
+       "winner": false,
+       "athlete": {
+        "fullName": "Modestino Rodrigues",
+        "displayName": "Modestino Rodrigues",
+        "shortName": "M. Rodrigues"
+       },
+       "records": [
+        {
+         "name": "overall",
+         "abbreviation": "TOT",
+         "type": "total",
+         "summary": "8-1-0"
+        }
+       ]
+      }
+     ],
+     "status": {
+      "clock": 0.0,
+      "displayClock": "-",
+      "period": 0,
+      "type": {
+       "id": "1",
+       "name": "STATUS_SCHEDULED",
+       "state": "pre",
+       "completed": false,
+       "description": "Scheduled",
+       "detail": "Sat, December 5th at 10:00 AM EST",
+       "shortDetail": "12/5 - 10:00 AM EST"
+      }
+     },
+     "broadcasts": [
+      {
+       "market": "national",
+       "names": [
+        "Paramount+"
+       ]
+      }
+     ],
+     "format": {
+      "regulation": {
+       "periods": 3
+      }
+     },
+     "startDate": "2026-12-05T15:00Z",
+     "broadcast": "Paramount+"
+    }
+   ],
+   "venues": [
+    {
+     "id": "11170",
+     "fullName": "ANB Arena",
+     "address": {
+      "city": "Riyadh",
+      "country": "Saudi Arabia"
+     }
+    }
+   ],
+   "status": {
+    "type": {
+     "id": "1",
+     "name": "STATUS_SCHEDULED",
+     "state": "pre",
+     "completed": false,
+     "description": "Scheduled",
+     "detail": "Scheduled",
+     "shortDetail": "Scheduled"
+    }
+   }
+  },
+  {
+   "id": "600061401",
+   "uid": "s:3301~l:3321~e:600061401",
+   "date": "2026-12-12T22:00Z",
+   "name": "UFC 335: Oliveira vs. Lopes",
+   "shortName": "UFC 335",
+   "season": {
+    "year": 2026,
+    "type": 2,
+    "slug": "regular-season"
+   },
+   "competitions": [
+    {
+     "id": "401930356",
+     "uid": "s:3301~l:3321~e:600061401~c:401930356",
+     "date": "2026-12-12T22:00Z",
+     "endDate": "2026-12-12T22:00Z",
+     "type": {
+      "id": "990",
+      "abbreviation": "Light Heavyweight"
+     },
+     "timeValid": true,
+     "neutralSite": false,
+     "playByPlayAvailable": false,
+     "recent": false,
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     },
+     "competitors": [
+      {
+       "id": "5122234",
+       "uid": "s:3301~a:5122234",
+       "type": "athlete",
+       "order": 2,
+       "winner": false,
+       "athlete": {
+        "fullName": "Junior Tafa",
+        "displayName": "Junior Tafa",
+        "shortName": "J. Tafa"
+       },
+       "records": [
+        {
+         "name": "overall",
+         "abbreviation": "TOT",
+         "type": "total",
+         "summary": "7-6-0"
+        }
+       ]
+      },
+      {
+       "id": "5307124",
+       "uid": "s:3301~a:5307124",
+       "type": "athlete",
+       "order": 1,
+       "winner": false,
+       "athlete": {
+        "fullName": "Quentin Pasley",
+        "displayName": "Quentin Pasley",
+        "shortName": "Q. Pasley"
+       },
+       "records": [
+        {
+         "name": "overall",
+         "abbreviation": "TOT",
+         "type": "total",
+         "summary": "4-0-0"
+        }
+       ]
+      }
+     ],
+     "status": {
+      "clock": 0.0,
+      "displayClock": "-",
+      "period": 0,
+      "type": {
+       "id": "1",
+       "name": "STATUS_SCHEDULED",
+       "state": "pre",
+       "completed": false,
+       "description": "Scheduled",
+       "detail": "Sat, December 12th at 5:00 PM EST",
+       "shortDetail": "12/12 - 5:00 PM EST"
+      }
+     },
+     "broadcasts": [
+      {
+       "market": "national",
+       "names": [
+        "Paramount+"
+       ]
+      }
+     ],
+     "format": {
+      "regulation": {
+       "periods": 3
+      }
+     },
+     "startDate": "2026-12-12T22:00Z",
+     "broadcast": "Paramount+"
+    },
+    {
+     "id": "401930355",
+     "uid": "s:3301~l:3321~e:600061401~c:401930355",
+     "date": "2026-12-13T00:00Z",
+     "endDate": "2026-12-13T00:00Z",
+     "type": {
+      "id": "1007",
+      "abbreviation": "W Flyweight"
+     },
+     "timeValid": true,
+     "neutralSite": false,
+     "playByPlayAvailable": false,
+     "recent": false,
+     "venue": {
+      "id": "5060",
+      "fullName": "T-Mobile Arena",
+      "address": {
+       "city": "Las Vegas",
+       "state": "NV",
+       "address1": "3780 South Las Vegas Boulevard",
+       "country": "USA"
+      },
+      "indoor": true
+     },
+     "competitors": [
+      {
+       "id": "4246307",
+       "uid": "s:3301~a:4246307",
+       "type": "athlete",
+       "order": 1,
+       "winner": false,
+       "athlete": {
+        "fullName": "Maycee Barber",
+        "displayName": "Maycee Barber",
+        "shortName": "M. Barber"
+       },
+       "records": [
+        {
+         "name": "overall",
+         "abbreviation": "TOT",
+         "type": "total",
+         "summary": "15-3-0"
+        }
+       ]
+      },
+      {
+       "id": "5172179",
+       "uid": "s:3301~a:5172179",
+       "type": "athlete",
+       "order": 2,
+       "winner": false,
+       "athlete": {
+        "fullName": "Carli Judice",
+        "displayName": "Carli Judice",
+        "shortName": "C. Judice"
+       },
+       "records": [
+        {
+         "name": "overall",
+         "abbreviation": "TOT",
+         "type": "total",
+         "summary": "7-2-0"
+        }
+       ]
+      }
+     ],
+     "status": {
+      "clock": 0.0,
+      "displayClock": "-",
+      "period": 0,
+      "type": {
+       "id": "1",
+       "name": "STATUS_SCHEDULED",
+       "state": "pre",
+       "completed": false,
+       "description": "Scheduled",
+       "detail": "Sat, December 12th at 7:00 PM EST",
+       "shortDetail": "12/12 - 7:00 PM EST"
+      }
+     },
+     "broadcasts": [
+      {
+       "market": "national",
+       "names": [
+        "Paramount+"
+       ]
+      }
+     ],
+     "format": {
+      "regulation": {
+       "periods": 3
+      }
+     },
+     "startDate": "2026-12-13T00:00Z",
+     "broadcast": "Paramount+"
+    }
+   ],
+   "venues": [
+    {
+     "id": "5060",
+     "fullName": "T-Mobile Arena",
+     "address": {
+      "city": "Las Vegas",
+      "state": "NV",
+      "address1": "3780 South Las Vegas Boulevard",
+      "country": "USA"
+     }
+    }
+   ],
+   "status": {
+    "type": {
+     "id": "1",
+     "name": "STATUS_SCHEDULED",
+     "state": "pre",
+     "completed": false,
+     "description": "Scheduled",
+     "detail": "Scheduled",
+     "shortDetail": "Scheduled"
+    }
+   }
+  }
+ ]
+}
