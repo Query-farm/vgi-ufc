@@ -114,7 +114,7 @@ def test_card_fighters_bio() -> None:
     assert bonfim["height_in"] == Decimal("73.0")
     assert bonfim["reach_in"] == Decimal("72.5")
     assert bonfim["weigh_in_lbs"] == Decimal("170.5")
-    assert bonfim["ufc_athlete_url"] == "https://www.ufc.com/athlete/Gabriel-Bonfim"
+    assert bonfim["ufc_athlete_url"] == "https://www.ufc.com/athlete/gabriel-bonfim"
 
 
 def test_scorecards_per_judge_round() -> None:

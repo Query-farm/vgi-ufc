@@ -158,7 +158,7 @@ class FighterCareerStatsFunction(_FighterBase, TableFunctionGenerator[FighterArg
             llm=(
                 "One row per tracked fight for an ESPN athlete id with that fight's statistics: "
                 "knockdowns, total and significant strikes landed/attempted, distance strikes by "
-                "target, target shares, clinch and ground strikes, takedowns landed/attempted/slams, "
+                "target, per-target accuracy, clinch and ground strikes, takedowns landed/attempted/slams, "
                 "takedown accuracy, reversals, advances and submission attempts. SUM the columns for "
                 "career totals. Only fights ESPN tracked in detail appear (mostly UFC since 2010s)."
             ),

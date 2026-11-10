@@ -94,7 +94,7 @@ tasks:
       SELECT count(*) = 5
          AND count(*) FILTER (WHERE opponent_name = 'Dustin Poirier') = 2
       FROM ufc.main.fighter_fight_history(3022677)
-      WHERE fight_number BETWEEN 2 AND 6
+      WHERE fight_number BETWEEN 1 AND 5
     success_criteria: >-
       Uses fighter_fight_history(3022677) ordered by fight_number (or event_time descending) and
       lists the five most recent fights with opponent and result.

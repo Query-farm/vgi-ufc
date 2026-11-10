@@ -142,6 +142,11 @@ FROM ufc.main.event_bouts(600057024)
 ORDER BY match_number;
 ```
 
+In `event_bouts()`, `judges_scores` lists each judge's total as
+fighter1-fighter2 (not winner first), and `fighter1_record` and
+`fighter2_record` are the fighters' current ESPN records, not their records on
+fight night.
+
 ### Official UFC cards, results, and scorecards
 
 ```sql
@@ -161,6 +166,12 @@ SELECT fighter_name, reach_in, height_in, stance
 FROM ufc.main.card_fighters(1291)
 ORDER BY reach_in DESC
 LIMIT 3;
+
+-- Ranked fighters on that card (feed and ufc.com share ufc_athlete_url)
+SELECT c.fighter_name, r.division, r.rank
+FROM ufc.main.card_fighters(1343) AS c
+JOIN ufc.main.current_rankings AS r USING (ufc_athlete_url)
+ORDER BY r.rank;
 
 -- Each judge's total for a decision
 SELECT judge_name, sum(red_score) AS red, sum(blue_score) AS blue

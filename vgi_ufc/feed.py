@@ -118,7 +118,7 @@ CARD_FIGHTER_SCHEMA = pa.schema(
             pa.bool_(),
             "Whether the fighter earned a Performance of the Night bonus.",
         ),
-        field("ufc_athlete_url", pa.string(), "Fighter's ufc.com athlete page."),
+        field("ufc_athlete_url", pa.string(), "Fighter's ufc.com page (lower-case; joins current_rankings)."),
     ]
 )
 
@@ -378,14 +378,21 @@ def _fighter_row(fighter: Mapping[str, Any]) -> dict[str, Any]:
         "fighting_out_of_city": text(out_of.get("City")),
         "fighting_out_of_country": text(out_of.get("Country")),
         "performance_of_the_night": to_bool(fighter.get("PerformanceOfTheNight")),
-        "ufc_athlete_url": _https(text(fighter.get("UFCLink"))),
+        "ufc_athlete_url": _athlete_url(text(fighter.get("UFCLink"))),
     }
 
 
-def _https(url: str | None) -> str | None:
-    if url and url.startswith("http://"):
-        return "https://" + url.removeprefix("http://")
-    return url
+def _athlete_url(url: str | None) -> str | None:
+    """Normalize a feed ``UFCLink`` to the https, lower-case slug ufc.com redirects to.
+
+    The lower-case form matches ``current_rankings.ufc_athlete_url`` for the same fighter.
+    """
+    if not url:
+        return url
+    if url.startswith("http://"):
+        url = "https://" + url.removeprefix("http://")
+    prefix, marker, slug = url.partition("/athlete/")
+    return f"{prefix}{marker}{slug.lower()}" if marker else url
 
 
 def flatten_card_fighters(payload: Any) -> list[dict[str, Any]]:

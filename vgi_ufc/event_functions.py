@@ -111,7 +111,7 @@ class EventsFunction(TableFunctionGenerator[EventsArgs]):
             title="Event Calendar",
             llm=(
                 "One row per event for a promotion and calendar year from ESPN: event_id, name, "
-                "start time, venue, status and bout count. league => 'ufc' (default), 'pfl', or "
+                "start time, venue, status and bout count. league := 'ufc' (default), 'pfl', or "
                 "'bellator'. Use event_bouts(event_id) for the bouts and results. ESPN event ids are "
                 "not UFC feed ids; for official UFC fight stats find the feed id with feed_events()."
             ),
@@ -160,10 +160,11 @@ class EventBoutsFunction(TableFunctionGenerator[BoutsArgs]):
             llm=(
                 "One row per bout for an ESPN event_id (from events, upcoming_events or "
                 "current_season_events): running order (match_number 1 = main event), card segment, "
-                "weight class, both fighters with ESPN athlete ids and records, winner, method, "
-                "finishing detail, ending round and time, judges' scores and referee. Pass "
-                "league => 'pfl' or 'bellator' for those promotions. Works for UFC, PFL and Bellator; "
-                "for official UFC round-by-round statistics use the UFC feed functions instead."
+                "weight class, both fighters with ESPN athlete ids and current records, winner, method, "
+                "finishing detail, ending round and time, judges' scores (fighter1-fighter2) "
+                "and referee. Pass league := 'pfl' or 'bellator' for those promotions. "
+                "Works for UFC, PFL and Bellator; for official UFC round-by-round statistics "
+                "use the UFC feed functions instead."
             ),
             md=(
                 "ESPN fightcenter bouts for one event. Fighter ids are ESPN athlete ids, usable with "

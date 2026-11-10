@@ -113,7 +113,20 @@ def test_career_stats_join_profile() -> None:
     assert (poirier["sig_distance_leg_landed"], poirier["sig_distance_leg_attempted"]) == (8, 8)
     assert poirier["total_strike_accuracy_pct"] == Decimal("79.63")
     assert poirier["head_target_pct"] == Decimal("62.00")
+    # ESPN's "target breakdown" is per-target accuracy: 13 of 21 head strikes landed.
+    head = [
+        poirier[f"sig_{p}_head_{k}"]
+        for k in ("landed", "attempted")
+        for p in ("distance", "clinch", "ground")
+    ]
+    assert round(100 * sum(head[:3]) / sum(head[3:])) == 62
     assert by_event[401186853]["knockdowns"] == 1
+    # Accuracy with nothing attempted is undefined: NULL, not ESPN's 0%.
+    holloway = by_event[600059148]
+    assert holloway["head_target_pct"] == Decimal("0.00")
+    assert holloway["sig_distance_body_attempted"] == 0
+    assert holloway["body_target_pct"] is None
+    assert holloway["takedowns_attempted"] == 0 and holloway["takedown_accuracy_pct"] is None
 
 
 @pytest.mark.parametrize(

@@ -75,10 +75,16 @@ BOUT_SCHEMA = pa.schema(
         field("completed", pa.bool_(), "Whether the bout has finished."),
         field("fighter1_id", pa.int64(), "ESPN athlete identifier of the first-listed fighter."),
         field("fighter1_name", pa.string(), "First-listed fighter's name."),
-        field("fighter1_record", pa.string(), "First-listed fighter's record (W-L-D) as shown by ESPN."),
+        field(
+            "fighter1_record", pa.string(), "First-listed fighter's current record (W-L-D), not at bout time."
+        ),
         field("fighter2_id", pa.int64(), "ESPN athlete identifier of the second-listed fighter."),
         field("fighter2_name", pa.string(), "Second-listed fighter's name."),
-        field("fighter2_record", pa.string(), "Second-listed fighter's record (W-L-D) as shown by ESPN."),
+        field(
+            "fighter2_record",
+            pa.string(),
+            "Second-listed fighter's current record (W-L-D), not at bout time.",
+        ),
         field(
             "winner_id",
             pa.int64(),
@@ -94,7 +100,11 @@ BOUT_SCHEMA = pa.schema(
         field(
             "fight_duration_seconds", pa.int32(), "Total bout time in seconds, assuming five-minute rounds."
         ),
-        field("judges_scores", pa.string(), "Judges' scorecards as shown by ESPN, for decisions."),
+        field(
+            "judges_scores",
+            pa.string(),
+            "Judges' totals for decisions, each as fighter1-fighter2 (not winner first).",
+        ),
         field("referee_name", pa.string(), "Referee."),
     ]
 )
@@ -165,9 +175,9 @@ _CAREER_STATS: list[tuple[str, str, str, str, str]] = [
     ("sig_distance_head", "striking", "SDHL/A", "Significant distance head strikes", "pair"),
     ("sig_distance_body", "striking", "SDBL/A", "Significant distance body strikes", "pair"),
     ("sig_distance_leg", "striking", "SDLL/A", "Significant distance leg strikes", "pair"),
-    ("head_target_pct", "striking", "%HEAD", "Percent of significant strikes to the head.", "pct"),
-    ("body_target_pct", "striking", "%BODY", "Percent of significant strikes to the body.", "pct"),
-    ("leg_target_pct", "striking", "%LEG", "Percent of significant strikes to the legs.", "pct"),
+    ("head_target_pct", "striking", "%HEAD", "Head significant-strike accuracy percent.", "pct"),
+    ("body_target_pct", "striking", "%BODY", "Body significant-strike accuracy percent.", "pct"),
+    ("leg_target_pct", "striking", "%LEG", "Leg significant-strike accuracy percent.", "pct"),
     ("sig_clinch_head_landed", "clinch", "SCHL", "Significant clinch head strikes landed.", "int"),
     ("sig_clinch_head_attempted", "clinch", "SCHA", "Significant clinch head strikes attempted.", "int"),
     ("sig_clinch_body_landed", "clinch", "SCBL", "Significant clinch body strikes landed.", "int"),
@@ -485,6 +495,27 @@ def _category_key(name: Any) -> str:
     return str(name or "").strip().lower()
 
 
+#: Accuracy columns and the attempt columns they are computed from. ESPN reports
+#: ``0%`` when nothing was attempted; that is undefined, so it becomes NULL.
+_ACCURACY_ATTEMPTS = {
+    "total_strike_accuracy_pct": ("total_strikes_attempted",),
+    "takedown_accuracy_pct": ("takedowns_attempted",),
+    **{
+        f"{target}_target_pct": tuple(
+            f"sig_{position}_{target}_attempted" for position in ("distance", "clinch", "ground")
+        )
+        for target in ("head", "body", "leg")
+    },
+}
+
+
+def _null_accuracy_without_attempts(row: dict[str, Any]) -> None:
+    for column, attempt_columns in _ACCURACY_ATTEMPTS.items():
+        attempts = [row.get(name) for name in attempt_columns]
+        if all(value is not None for value in attempts) and sum(attempts) == 0:
+            row[column] = None
+
+
 def flatten_career_stats(stats_payload: Any, athlete_payload: Any, fighter_id: int) -> list[dict[str, Any]]:
     """One per-fight statistics row, enriched with event names from the profile."""
     events_map = mapping(mapping(athlete_payload).get("eventsMap"))
@@ -532,5 +563,6 @@ def flatten_career_stats(stats_payload: Any, athlete_payload: Any, fighter_id: i
                 row[name] = to_decimal(value, 2)
             else:
                 row[name] = to_int(value)
+        _null_accuracy_without_attempts(row)
         rows.append(row)
     return rows
