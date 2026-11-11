@@ -29,18 +29,18 @@ dataset.
 
 ## Quick start
 
-Install the released worker with `uv`:
+The worker is not published to PyPI. `uvx` runs the tagged release straight from
+GitHub and caches it after the first use:
 
 ```bash
-uv tool install vgi-ufc
-vgi-ufc
+uvx --from git+https://github.com/Query-farm/vgi-ufc@v0.1.0 vgi-ufc --help
 ```
 
 Launch Haybarn with the catalog pre-attached:
 
 ```bash
 uvx haybarn-cli \
-  -cmd "INSTALL vgi FROM community; LOAD vgi; ATTACH 'ufc' (TYPE vgi, LOCATION 'vgi-ufc');" \
+  -cmd "INSTALL vgi FROM community; LOAD vgi; ATTACH 'ufc' (TYPE vgi, LOCATION 'uvx --from git+https://github.com/Query-farm/vgi-ufc@v0.1.0 vgi-ufc');" \
   :memory:
 ```
 
@@ -51,7 +51,7 @@ INSTALL vgi FROM community;
 LOAD vgi;
 ATTACH 'ufc' (
   TYPE vgi,
-  LOCATION 'vgi-ufc'
+  LOCATION 'uvx --from git+https://github.com/Query-farm/vgi-ufc@v0.1.0 vgi-ufc'
 );
 ```
 
@@ -254,7 +254,7 @@ or an explicit anonymous-access decision:
 export VGI_SIGNING_KEY='a-long-random-secret-shared-by-every-replica'
 export VGI_BEARER_TOKENS='replace-with-a-random-token=haybarn'
 
-vgi-ufc-http \
+uvx --from git+https://github.com/Query-farm/vgi-ufc@v0.1.0 vgi-ufc-http \
   --host 0.0.0.0 \
   --port 8000 \
   --cors-origins 'https://sql.example.com' \
@@ -347,9 +347,12 @@ recorded upstream responses from `tests/fixtures/` on a local HTTP server and
 queries every table and function. Live upstream smoke tests are opt-in with
 `uv run pytest -m live`. They also run in a serialized scheduled workflow
 alongside the executing vgi-lint pass, which runs every catalog example.
-Publishing is release-driven: create a GitHub release named `vX.Y.Z` that
-matches the version in `pyproject.toml`. CI then builds, attests, validates,
-and publishes the distributions through PyPI trusted publishing.
+Publishing is driven by releases. Create a GitHub release named `vX.Y.Z` that
+matches the version in `pyproject.toml`. CI then builds, validates and attests
+the wheel and sdist, attaches them to the release, and publishes a
+multi-platform container image to `ghcr.io/query-farm/vgi-ufc`. The package is
+not published to PyPI; install it from the release tag as shown in the quick
+start.
 
 ## Authorship & License
 
