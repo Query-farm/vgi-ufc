@@ -4,6 +4,12 @@ All notable changes to this project are documented here.
 
 ## [Unreleased]
 
+## [0.2.0]
+
+- Speaks VGI protocol 3.3 (vgi-python 0.51); requires the current VGI DuckDB
+  extension (3.2 extensions are incompatible).
+- CI lints with vgi-lint-check 2.5.0.
+
 ## [0.1.0]
 
 - Initial release on VGI protocol 3.2 (vgi-python 0.50, vgi-lint-check 2.2.0).

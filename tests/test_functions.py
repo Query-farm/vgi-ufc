@@ -103,7 +103,7 @@ def test_every_request_carries_the_honest_user_agent(fixture_env: dict[str, str]
     _run(rankings.CurrentRankingsFunction)
     _run(fights.FightCardFunction, fights.EventArgs(event_id=1291))
     agents = {agent for _, agent in FixtureHandler.requests}
-    assert agents == {"vgi-ufc/0.1.0 (+https://github.com/Query-farm/vgi-ufc)"}
+    assert agents == {"vgi-ufc/0.2.0 (+https://github.com/Query-farm/vgi-ufc)"}
 
 
 def test_cache_control_uses_shortest_lifetime() -> None:
