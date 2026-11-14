@@ -98,3 +98,19 @@ tasks:
     success_criteria: >-
       Uses fighter_fight_history(3022677) ordered by fight_number (or event_time descending) and
       lists the five most recent fights with opponent and result.
+
+  # The two composed tasks below grade the agent's answer with the success_criteria judge
+  # only: a check_sql here would assert facts about the (read-only) catalog and pass
+  # whatever the agent answered, and exact-compare reference_sql is unsafe on live data.
+  - name: judges_vs_striking_12000
+    success_criteria: >-
+      Joins fight_round_stats(12000) to fight_scorecards(12000) by round. Correct answer: in round 1
+      Guy Girard and Mike Bell scored 10-9 for Ivan Erslan although Navajo Stirling outlanded him
+      31-12; in round 2 Eric Colon scored 10-9 for Erslan although Stirling outlanded him 19-11. No
+      judge gave round 3 (Stirling 60-13) to Erslan. Any other judge/round pairing is wrong.
+
+  - name: main_event_strikes_1291
+    success_criteria: >-
+      Finds the main event (fight_order = 1, fight_id 12447) with fight_results(1291), then reads
+      fight_stats(12447). Correct answer: Gabriel Bonfim beat Randy Brown by KO/TKO (a knee) in round
+      2 at 1:40; Bonfim landed 35 of 64 significant strikes and Brown landed 33 of 87.

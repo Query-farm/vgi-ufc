@@ -17,7 +17,15 @@ from vgi_ufc.event_functions import (
     CurrentSeasonEventsFunction,
     UpcomingEventsFunction,
 )
-from vgi_ufc.fight_functions import FIGHT_FUNCTIONS
+from vgi_ufc.fight_functions import (
+    FIGHT_FUNCTIONS,
+    JUDGES_VS_STRIKES_DESCRIPTION,
+    JUDGES_VS_STRIKES_SQL,
+    RANKED_ON_CARD_DESCRIPTION,
+    RANKED_ON_CARD_SQL,
+    REACH_EDGE_DESCRIPTION,
+    REACH_EDGE_SQL,
+)
 from vgi_ufc.fighter_functions import FIGHTER_FUNCTIONS
 from vgi_ufc.meta import column_comments
 from vgi_ufc.ranking_functions import RANKING_FUNCTIONS, CurrentRankingsFunction
@@ -32,6 +40,19 @@ _RANKINGS_SQL = (
 _CHAMPIONS_SQL = (
     "SELECT division, fighter_name, is_interim_champion FROM ufc.main.current_rankings "
     "WHERE is_champion ORDER BY division_order"
+)
+
+_RANKINGS_EXAMPLES = [
+    {"description": "The current lightweight top 15.", "sql": _RANKINGS_SQL},
+    {"description": "Every current UFC champion.", "sql": _CHAMPIONS_SQL},
+]
+_SCHEMA_EXAMPLES = json.dumps(
+    [
+        *_RANKINGS_EXAMPLES,
+        {"description": JUDGES_VS_STRIKES_DESCRIPTION, "sql": JUDGES_VS_STRIKES_SQL},
+        {"description": REACH_EDGE_DESCRIPTION, "sql": REACH_EDGE_SQL},
+        {"description": RANKED_ON_CARD_DESCRIPTION, "sql": RANKED_ON_CARD_SQL},
+    ]
 )
 
 _RANKINGS_TAGS = {
@@ -50,12 +71,7 @@ _RANKINGS_TAGS = {
         "Official UFC rankings scraped on demand from ufc.com/rankings and cached for up to an hour. "
         "Champions are rank 0. ESPN's MMA rankings are stale and are intentionally not used."
     ),
-    "vgi.example_queries": json.dumps(
-        [
-            {"description": "The current lightweight top 15.", "sql": _RANKINGS_SQL},
-            {"description": "Every current UFC champion.", "sql": _CHAMPIONS_SQL},
-        ]
-    ),
+    "vgi.example_queries": json.dumps(_RANKINGS_EXAMPLES),
 }
 
 _UPCOMING_TAGS = {
@@ -179,6 +195,21 @@ _AGENT_TEST_TASKS = json.dumps(
         {
             "name": "mcgregor_recent_fights",
             "prompt": "List the five most recent fights of Conor McGregor (ESPN id 3022677) with results.",
+        },
+        {
+            "name": "judges_vs_striking_12000",
+            "prompt": (
+                "In UFC fight id 12000, which judges scored a round for the fighter who landed fewer "
+                "significant strikes in that round? Give each judge, the round, and both fighters' "
+                "landed significant strikes for it."
+            ),
+        },
+        {
+            "name": "main_event_strikes_1291",
+            "prompt": (
+                "For the main event of UFC feed event 1291, how did the fight end (method, round and "
+                "time), and how many significant strikes did each fighter land and attempt?"
+            ),
         },
     ]
 )
@@ -332,7 +363,7 @@ UFC_CATALOG = Catalog(
                     "Use the ESPN side for calendars, other promotions and career histories; use the "
                     "UFC feed side for official per-fight and per-round statistics and scorecards."
                 ),
-                "vgi.example_queries": _RANKINGS_TAGS["vgi.example_queries"],
+                "vgi.example_queries": _SCHEMA_EXAMPLES,
             },
             functions=[*RANKING_FUNCTIONS, *EVENT_FUNCTIONS, *FIGHT_FUNCTIONS, *FIGHTER_FUNCTIONS],
             tables=[

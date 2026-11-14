@@ -167,7 +167,7 @@ FROM ufc.main.card_fighters(1291)
 ORDER BY reach_in DESC
 LIMIT 3;
 
--- Ranked fighters on that card (feed and ufc.com share ufc_athlete_url)
+-- Ranked fighters on the 2026-11-07 card, feed id 1343 (feed and ufc.com share ufc_athlete_url)
 SELECT c.fighter_name, r.division, r.rank
 FROM ufc.main.card_fighters(1343) AS c
 JOIN ufc.main.current_rankings AS r USING (ufc_athlete_url)
@@ -195,6 +195,25 @@ SELECT round_number, fighter_name, sig_strikes_landed, sig_head_landed,
        sig_ground_landed, control_seconds
 FROM ufc.main.fight_round_stats(12000)
 ORDER BY round_number, corner DESC;
+
+-- Did the judges follow the striking? Red outlanded blue 31-12 in round 1
+-- but won it on only one of three cards
+WITH strikes AS (
+  SELECT round_number,
+         max(sig_strikes_landed) FILTER (WHERE corner = 'Red') AS red_landed,
+         max(sig_strikes_landed) FILTER (WHERE corner = 'Blue') AS blue_landed
+  FROM ufc.main.fight_round_stats(12000)
+  GROUP BY round_number
+), votes AS (
+  SELECT round_number,
+         count(*) FILTER (WHERE red_score > blue_score) AS judges_for_red,
+         count(*) FILTER (WHERE blue_score > red_score) AS judges_for_blue
+  FROM ufc.main.fight_scorecards(12000)
+  GROUP BY round_number
+)
+SELECT round_number, red_landed, blue_landed, judges_for_red, judges_for_blue
+FROM strikes JOIN votes USING (round_number)
+ORDER BY round_number;
 ```
 
 Significant strikes are broken down by target (head, body, leg) and position

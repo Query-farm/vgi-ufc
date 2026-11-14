@@ -109,6 +109,48 @@ _ROUNDS_SQL = (
     "FROM ufc.main.fight_round_stats(12000) ORDER BY round_number, corner DESC"
 )
 
+# Composed examples: each joins two of the worker's functions (or a function and a table).
+JUDGES_VS_STRIKES_SQL = (
+    "WITH strikes AS (SELECT round_number, "
+    "max(sig_strikes_landed) FILTER (WHERE corner = 'Red') AS red_landed, "
+    "max(sig_strikes_landed) FILTER (WHERE corner = 'Blue') AS blue_landed "
+    "FROM ufc.main.fight_round_stats(12000) GROUP BY round_number), "
+    "votes AS (SELECT round_number, count(*) FILTER (WHERE red_score > blue_score) AS judges_for_red, "
+    "count(*) FILTER (WHERE blue_score > red_score) AS judges_for_blue "
+    "FROM ufc.main.fight_scorecards(12000) GROUP BY round_number) "
+    "SELECT round_number, red_landed, blue_landed, judges_for_red, judges_for_blue "
+    "FROM strikes JOIN votes USING (round_number) ORDER BY round_number"
+)
+JUDGES_VS_STRIKES_DESCRIPTION = (
+    "Fight 12000 round by round: significant strikes landed by each corner next to how many judges "
+    "scored the round for each corner (red-corner Navajo Stirling outlanded Ivan Erslan 31-12 in "
+    "round 1 but won it on only one of three cards)."
+)
+REACH_EDGE_SQL = (
+    "SELECT r.fight_order, r.winner_name, r.loser_name, r.method, "
+    "w.reach_in - l.reach_in AS winner_reach_edge_in "
+    "FROM ufc.main.fight_results(1291) AS r "
+    "JOIN ufc.main.card_fighters(1291) AS w "
+    "ON w.fight_id = r.fight_id AND w.fighter_id = r.winner_fighter_id "
+    "JOIN ufc.main.card_fighters(1291) AS l "
+    "ON l.fight_id = r.fight_id AND l.fighter_id = r.loser_fighter_id "
+    "ORDER BY r.fight_order"
+)
+REACH_EDGE_DESCRIPTION = (
+    "Every result on UFC feed event 1291 with the winner's reach advantage over the loser in inches "
+    "(negative when the shorter-reach fighter won), from fight_results joined to card_fighters."
+)
+RANKED_ON_CARD_SQL = (
+    "SELECT c.fighter_name, r.division, r.rank "
+    "FROM ufc.main.card_fighters(1343) AS c "
+    "JOIN ufc.main.current_rankings AS r USING (ufc_athlete_url) "
+    "ORDER BY r.rank, r.division, c.fighter_name"
+)
+RANKED_ON_CARD_DESCRIPTION = (
+    "Fighters on the 2026-11-07 card (UFC feed event 1343) who hold a current ufc.com ranking, "
+    "matched on ufc_athlete_url; a fighter appears once per list they are ranked on."
+)
+
 
 def _scan(first_id: int, last_id: int) -> tuple[list[dict], list[int]]:
     if last_id < first_id:
@@ -250,13 +292,20 @@ class CardFightersFunction(_EventBase, TableFunctionGenerator[EventArgs]):
                 "One row per fighter per fight on a UFC feed event: corner, outcome (Win, Loss, Draw, "
                 "NC), record at the time, date of birth, age, stance, height and reach in inches, "
                 "weigh-in weight in pounds, birthplace, training location, Performance of the Night "
-                "bonus, and ufc.com athlete link. Takes a UFC feed event id."
+                "bonus, and ufc.com athlete link. Takes a UFC feed event id. Join to fight_results on "
+                "fight_id and fighter_id, or to current_rankings on ufc_athlete_url."
             ),
             md="Fighter-grain detail for a UFC card from the official feed.",
             schema=CARD_FIGHTER_SCHEMA,
-            examples=[("Size and stance of every fighter on feed event 1291.", _FIGHTERS_SQL)],
+            examples=[
+                ("Size and stance of every fighter on feed event 1291.", _FIGHTERS_SQL),
+                (RANKED_ON_CARD_DESCRIPTION, RANKED_ON_CARD_SQL),
+            ],
         )
-        examples = [FunctionExample(sql=_FIGHTERS_SQL, description="Fighters on UFC feed event 1291")]
+        examples = [
+            FunctionExample(sql=_FIGHTERS_SQL, description="Fighters on UFC feed event 1291"),
+            FunctionExample(sql=RANKED_ON_CARD_SQL, description=RANKED_ON_CARD_DESCRIPTION),
+        ]
 
 
 @init_single_worker
@@ -290,9 +339,15 @@ class FightResultsFunction(_EventBase, TableFunctionGenerator[EventArgs]):
                 "winner-loser; per-round scoring is in `fight_scorecards(fight_id)`."
             ),
             schema=FIGHT_RESULT_SCHEMA,
-            examples=[("Results of UFC feed event 1291.", _RESULTS_SQL)],
+            examples=[
+                ("Results of UFC feed event 1291.", _RESULTS_SQL),
+                (REACH_EDGE_DESCRIPTION, REACH_EDGE_SQL),
+            ],
         )
-        examples = [FunctionExample(sql=_RESULTS_SQL, description="Results of UFC feed event 1291")]
+        examples = [
+            FunctionExample(sql=_RESULTS_SQL, description="Results of UFC feed event 1291"),
+            FunctionExample(sql=REACH_EDGE_SQL, description=REACH_EDGE_DESCRIPTION),
+        ]
 
 
 @init_single_worker
@@ -321,9 +376,15 @@ class FightScorecardsFunction(_FightBase, TableFunctionGenerator[FightArgs]):
             ),
             md="Per-round judging for a decision. Finished fights return an empty result.",
             schema=SCORECARD_SCHEMA,
-            examples=[("How each judge scored every round of fight 12000.", _SCORECARDS_SQL)],
+            examples=[
+                ("How each judge scored every round of fight 12000.", _SCORECARDS_SQL),
+                (JUDGES_VS_STRIKES_DESCRIPTION, JUDGES_VS_STRIKES_SQL),
+            ],
         )
-        examples = [FunctionExample(sql=_SCORECARDS_SQL, description="Judges' round scores for fight 12000")]
+        examples = [
+            FunctionExample(sql=_SCORECARDS_SQL, description="Judges' round scores for fight 12000"),
+            FunctionExample(sql=JUDGES_VS_STRIKES_SQL, description=JUDGES_VS_STRIKES_DESCRIPTION),
+        ]
 
 
 @init_single_worker
