@@ -1,0 +1,15 @@
+{
+  "source": "UFC live-data feed; factual sports results, no open data licence",
+  "responses": [
+    {
+      "path": "/fight/live/12000.json",
+      "file": "fight-12000.json",
+      "url": "https://d29dxerjsp82wz.cloudfront.net/api/v3/fight/live/12000.json",
+      "retrieved_at_utc": "2026-11-14T10:54:33.970000+00:00",
+      "status": 200,
+      "bytes": 18769,
+      "sha256": "d09315ffc4997001d70a754e941cc882f30f2cf76eda79945ca8b9c4e43fc23a",
+      "content_type": "application/json"
+    }
+  ]
+}

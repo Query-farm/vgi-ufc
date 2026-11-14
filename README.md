@@ -378,3 +378,7 @@ start.
 Written by [Query.Farm](https://query.farm) and released under the [MIT License](LICENSE).
 
 Copyright 2026 Query Farm LLC - https://query.farm
+
+## Executed notebook
+
+[Compare strike counts with individual scorecards](notebooks/README.md) using a bounded historical fight and a round-prefix experiment.
