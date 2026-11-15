@@ -7,6 +7,8 @@ All notable changes to this project are documented here.
 ## [0.2.1]
 
 - Docs link to upstream sources (VGI183): the catalog documentation now links the data providers it reads.
+- Docs give an overview, not a function list (VGI173): the catalog doc_llm now describes the data,
+  its three sources and the two id systems instead of naming every table and function.
 
 ## [0.2.0]
 

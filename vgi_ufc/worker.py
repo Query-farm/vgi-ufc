@@ -309,14 +309,16 @@ UFC_CATALOG = Catalog(
         "vgi.executable_examples": _EXECUTABLE_EXAMPLES,
         "vgi.agent_test_tasks": _AGENT_TEST_TASKS,
         "vgi.doc_llm": (
-            "Read-only mixed martial arts data. current_rankings holds the official ufc.com rankings "
-            "(champions as rank 0); upcoming_events and current_season_events list UFC events from "
-            "ESPN. Two id systems exist. ESPN ids (event_id from events/upcoming_events, athlete ids "
-            "from event_bouts) work with event_bouts, fighter, fighter_fight_history and "
-            "fighter_career_stats, and cover PFL and Bellator too. UFC's official live-data feed uses "
-            "its own sequential integers: find an event id with feed_events(first_id, last_id) (1291 = "
-            "2025-11-08, 1343 = 2026-11-07), then use fight_card, card_fighters and fight_results; "
-            "their fight_id values feed fight_stats, fight_round_stats and fight_scorecards."
+            "Read-only mixed martial arts data: official UFC rankings (champions as rank 0), event "
+            "calendars, fight cards, results, judges' scorecards, fighter careers, and per-fight and "
+            "round-by-round striking and grappling statistics. Three sources are combined: ufc.com for "
+            "rankings, ESPN for calendars, bouts and fighter profiles across UFC, PFL and Bellator, and "
+            "UFC's official live-data feed for authoritative cards, results, judging and round detail. "
+            "Two id systems exist and never join. ESPN ids (events and athletes) link calendars, bouts "
+            "and fighter careers. The UFC feed numbers events and fights with its own sequential "
+            "integers that cannot be searched by name: discover event ids by scanning an id range with "
+            "feed_events, take fight ids from the event's card, then fetch statistics and scorecards by "
+            "fight id. Match the two systems by event date and fighter name, not by id."
         ),
         "vgi.doc_md": (
             "# UFC fight data\n\n"
