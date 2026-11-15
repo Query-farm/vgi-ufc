@@ -6,6 +6,15 @@ All notable changes to this project are documented here.
 
 ## [0.2.1]
 
+- `current_rankings.ufc_athlete_url` is canonical again (`https://www.ufc.com/athlete/<slug>`). ufc.com
+  now links most ranked athletes as `/index%2ephp/athlete/<slug>`, which broke the join to
+  `card_fighters().ufc_athlete_url` for every card (the ranked-on-card example returned no rows,
+  VGI902). The URL is rebuilt from the slug.
+- The ranked-on-card example uses UFC 324 (feed event 1294), a completed card with more ranked
+  fighters, so it survives weekly ranking changes; a live test pins the join.
+- `vgi-lint.toml` waives VGI809 for `upcoming_events`/`current_season_events`: they share ESPN
+  event ids but neither is a subset of the other, so no foreign key holds.
+
 - Docs link to upstream sources (VGI183): the catalog documentation now links the data providers it reads.
 - Docs give an overview, not a function list (VGI173): the catalog doc_llm now describes the data,
   its three sources and the two id systems instead of naming every table and function.

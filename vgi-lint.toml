@@ -24,3 +24,16 @@ ignore = [
   { code = "VGI311", kind = "tooling-bug", reason = "Exposed as the current_season_events table; the rule only matches a table with the function's own name, which cannot coexist with the function in one schema." },
   { code = "VGI520", kind = "domain-exemption", reason = "Agent tasks query the public current_season_events table, which scans this function; the hermetic Haybarn E2E test calls the backing scan directly." },
 ]
+
+# Both tables carry ESPN event ids, but neither is a subset of the other, so a
+# FOREIGN KEY either way would be false: upcoming_events spans this year and next,
+# while current_season_events covers this calendar year including finished events.
+[per_object."ufc.main.upcoming_events"]
+ignore = [
+  { code = "VGI809", kind = "domain-exemption", reason = "event_id is an ESPN event id shared with current_season_events, but upcoming_events includes next year's events that current_season_events never holds, so no foreign key is true." },
+]
+
+[per_object."ufc.main.current_season_events"]
+ignore = [
+  { code = "VGI809", kind = "domain-exemption", reason = "event_id is an ESPN event id shared with upcoming_events, but current_season_events includes this year's finished events that upcoming_events never holds, so no foreign key is true." },
+]

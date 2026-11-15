@@ -167,9 +167,9 @@ FROM ufc.main.card_fighters(1291)
 ORDER BY reach_in DESC
 LIMIT 3;
 
--- Ranked fighters on the 2026-11-07 card, feed id 1343 (feed and ufc.com share ufc_athlete_url)
+-- Ranked fighters on the UFC 324 card, feed id 1294 (feed and ufc.com share ufc_athlete_url)
 SELECT c.fighter_name, r.division, r.rank
-FROM ufc.main.card_fighters(1343) AS c
+FROM ufc.main.card_fighters(1294) AS c
 JOIN ufc.main.current_rankings AS r USING (ufc_athlete_url)
 ORDER BY r.rank;
 

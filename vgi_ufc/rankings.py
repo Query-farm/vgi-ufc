@@ -191,8 +191,17 @@ def _slug(href: str | None) -> str | None:
 
 
 def _url(href: str | None) -> str | None:
+    """Canonical ``https://www.ufc.com/athlete/<slug>`` for a rankings-page athlete link.
+
+    ufc.com links most athletes as ``/index%2ephp/athlete/<slug>`` (a few as plain
+    ``/athlete/<slug>``); both redirect to the canonical page. Rebuilding the URL from
+    the slug keeps ``ufc_athlete_url`` equal to the feed's normalized ``UFCLink`` for
+    the same fighter, which is the join key between the two sources.
+    """
     if not href:
         return None
+    if slug := _slug(href):
+        return f"https://www.ufc.com/athlete/{slug.lower()}"
     return href if href.startswith("http") else f"https://www.ufc.com{href}"
 
 

@@ -80,3 +80,12 @@ def test_official_rankings() -> None:
     champions = [row for row in rows if row["is_champion"]]
     assert len(champions) >= 10
     assert len({(row["division"], row["fighter_slug"]) for row in rows}) == len(rows)
+
+
+def test_rankings_join_the_feed_on_athlete_url() -> None:
+    """The UFC 324 card (feed 1294) shares ufc_athlete_url with current rankings."""
+    rankings = parse_rankings(api.fetch_rankings_html().payload)
+    ranked = {row["ufc_athlete_url"] for row in rankings}
+    assert all(url.startswith("https://www.ufc.com/athlete/") for url in ranked)
+    card = feed.flatten_card_fighters(api.fetch_feed_event(1294).payload)
+    assert sum(row["ufc_athlete_url"] in ranked for row in card) >= 3

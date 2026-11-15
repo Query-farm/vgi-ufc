@@ -142,12 +142,13 @@ REACH_EDGE_DESCRIPTION = (
 )
 RANKED_ON_CARD_SQL = (
     "SELECT c.fighter_name, r.division, r.rank "
-    "FROM ufc.main.card_fighters(1343) AS c "
+    "FROM ufc.main.card_fighters(1294) AS c "
     "JOIN ufc.main.current_rankings AS r USING (ufc_athlete_url) "
     "ORDER BY r.rank, r.division, c.fighter_name"
 )
 RANKED_ON_CARD_DESCRIPTION = (
-    "Fighters on the 2026-11-07 card (UFC feed event 1343) who hold a current ufc.com ranking, "
+    "Fighters on the UFC 324 card (2026-01-24, UFC feed event 1294) who hold a current ufc.com "
+    "ranking, "
     "matched on ufc_athlete_url; a fighter appears once per list they are ranked on."
 )
 

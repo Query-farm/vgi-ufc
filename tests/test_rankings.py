@@ -69,3 +69,21 @@ def test_interim_title_is_flagged() -> None:
 def test_structure_change_fails_loudly() -> None:
     with pytest.raises(ValueError, match="no longer contains"):
         parse_rankings("<html><body><p>Rankings moved</p></body></html>")
+
+
+@pytest.mark.parametrize(
+    "href",
+    [
+        "/index%2ephp/athlete/Aaron-Pico",
+        "/athlete/aaron-pico",
+        "https://www.ufc.com/index%2ephp/athlete/aaron-pico",
+        "http://www.ufc.com/athlete/Aaron-Pico?x=1",
+    ],
+)
+def test_athlete_url_is_canonical_and_matches_the_feed(href: str) -> None:
+    """ufc.com links most ranked athletes via /index%2ephp/athlete/<slug>; the join key must not."""
+    from vgi_ufc.feed import _athlete_url
+    from vgi_ufc.rankings import _url
+
+    assert _url(href) == "https://www.ufc.com/athlete/aaron-pico"
+    assert _url(href) == _athlete_url("http://www.ufc.com/athlete/Aaron-Pico")
