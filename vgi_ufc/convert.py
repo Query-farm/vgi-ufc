@@ -40,7 +40,7 @@ def to_int(value: Any) -> int | None:
         return int(value) if value.is_integer() else None
     try:
         return int(str(value).strip())
-    except (TypeError, ValueError, OverflowError):
+    except TypeError, ValueError, OverflowError:
         return None
 
 
@@ -51,7 +51,7 @@ def to_decimal(value: Any, places: int | None = None) -> Decimal | None:
     raw = str(value).strip().removesuffix("%")
     try:
         result = Decimal(raw)
-    except (InvalidOperation, ValueError):
+    except InvalidOperation, ValueError:
         return None
     if not result.is_finite():
         return None
@@ -71,7 +71,7 @@ def to_timestamp(value: Any) -> datetime | None:
         return None
     try:
         result = datetime.fromisoformat(value.replace("Z", "+00:00"))
-    except (ValueError, OverflowError):
+    except ValueError, OverflowError:
         return None
     if result.tzinfo is None:
         result = result.replace(tzinfo=UTC)
