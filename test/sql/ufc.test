@@ -1,0 +1,75 @@
+# name: test/sql/ufc.test
+# description: Hermetic end-to-end coverage: every current table and function,
+#   served from the recorded fixtures by test/mock_api/server.py (see ci/run-integration.sh).
+# group: [ufc]
+
+require vgi
+
+require-env VGI_UFC_WORKER
+
+require-env UFC_FEED_BASE_URL
+
+statement ok
+ATTACH 'ufc' (TYPE vgi, LOCATION '{VGI_UFC_WORKER}');
+
+# Each current table agrees with its backing scan function.
+query I
+SELECT (SELECT count(*) FROM ufc.main.current_rankings) = (SELECT count(*) FROM ufc.main.all_current_rankings())
+   AND (SELECT count(*) FROM ufc.main.current_rankings) > 30;
+----
+true
+
+query I
+SELECT (SELECT count(*) FROM ufc.main.upcoming_events) = (SELECT count(*) FROM ufc.main.all_upcoming_events())
+   AND (SELECT count(*) FROM ufc.main.upcoming_events) > 0;
+----
+true
+
+query I
+SELECT (SELECT count(*) FROM ufc.main.current_season_events) = (SELECT count(*) FROM ufc.main.all_current_season_events())
+   AND (SELECT count(*) FROM ufc.main.current_season_events) > (SELECT count(*) FROM ufc.main.upcoming_events);
+----
+true
+
+query I
+SELECT (SELECT count(*) FROM ufc.main.events(season := 2026)) = (SELECT count(*) FROM ufc.main.current_season_events);
+----
+true
+
+query I
+SELECT count(*) FROM ufc.main.event_bouts(600061268);
+----
+4
+
+query I
+SELECT count(*) FROM ufc.main.feed_events(1290, 1292);
+----
+1
+
+query II
+SELECT (SELECT count(*) FROM ufc.main.fight_card(1291)), (SELECT count(*) FROM ufc.main.card_fighters(1291));
+----
+4	8
+
+query T
+SELECT winner_name FROM ufc.main.fight_results(1291) WHERE fight_order = 1;
+----
+Gabriel Bonfim
+
+query III
+SELECT (SELECT count(*) FROM ufc.main.fight_scorecards(12000)),
+       (SELECT sum(sig_strikes_landed) FROM ufc.main.fight_stats(12000)),
+       (SELECT count(*) FROM ufc.main.fight_round_stats(12000));
+----
+9	146	6
+
+query T
+SELECT record FROM ufc.main.fighter(3022677);
+----
+22-7-0
+
+query II
+SELECT (SELECT count(*) FROM ufc.main.fighter_fight_history(3022677)),
+       (SELECT count(*) FROM ufc.main.fighter_career_stats(3022677));
+----
+5	5
