@@ -33,14 +33,14 @@ The worker is not published to PyPI. `uvx` runs the tagged release straight from
 GitHub and caches it after the first use:
 
 ```bash
-uvx --from git+https://github.com/Query-farm/vgi-ufc@v0.2.2 vgi-ufc --help
+uvx --from git+https://github.com/Query-farm/vgi-ufc@v0.3.0 vgi-ufc --help
 ```
 
 Launch Haybarn with the catalog pre-attached:
 
 ```bash
 uvx haybarn-cli \
-  -cmd "INSTALL vgi FROM community; LOAD vgi; ATTACH 'ufc' (TYPE vgi, LOCATION 'uvx --from git+https://github.com/Query-farm/vgi-ufc@v0.2.2 vgi-ufc');" \
+  -cmd "INSTALL vgi FROM community; LOAD vgi; ATTACH 'ufc' (TYPE vgi, LOCATION 'uvx --from git+https://github.com/Query-farm/vgi-ufc@v0.3.0 vgi-ufc');" \
   :memory:
 ```
 
@@ -51,7 +51,7 @@ INSTALL vgi FROM community;
 LOAD vgi;
 ATTACH 'ufc' (
   TYPE vgi,
-  LOCATION 'uvx --from git+https://github.com/Query-farm/vgi-ufc@v0.2.2 vgi-ufc'
+  LOCATION 'uvx --from git+https://github.com/Query-farm/vgi-ufc@v0.3.0 vgi-ufc'
 );
 ```
 
@@ -59,6 +59,8 @@ For source development, run `uv lock --check --no-sources`, then
 `uv sync --no-sources` and `uv run --no-sources vgi-ufc`.
 The lockfile resolves all dependencies from package registries and does not
 require a sibling checkout.
+
+vgi-ufc 0.3.0 speaks VGI protocol 3.4, so it needs Haybarn 2.0.1 or newer (Haybarn 2.0.0 loads a 3.3 `vgi` extension that cannot attach it).
 
 ## Catalog surface
 
@@ -273,7 +275,7 @@ or an explicit anonymous-access decision:
 export VGI_SIGNING_KEY='a-long-random-secret-shared-by-every-replica'
 export VGI_BEARER_TOKENS='replace-with-a-random-token=haybarn'
 
-uvx --from git+https://github.com/Query-farm/vgi-ufc@v0.2.2 vgi-ufc-http \
+uvx --from git+https://github.com/Query-farm/vgi-ufc@v0.3.0 vgi-ufc-http \
   --host 0.0.0.0 \
   --port 8000 \
   --cors-origins 'https://sql.example.com' \
@@ -356,7 +358,7 @@ uv run --no-sources ruff format --check .
 uv run --no-sources pytest
 uv build
 uvx twine check dist/*
-uvx --no-sources --from vgi-lint-check==2.2.0 vgi-lint lint \
+uvx --no-sources --prerelease=allow --from 'vgi-lint-check>=2.9.0,<3' vgi-lint lint \
   'uv run --no-sources ufc_worker.py' \
   --no-execute --no-check-links --audit-waivers --fail-on warning
 ```
